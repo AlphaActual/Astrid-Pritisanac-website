@@ -383,7 +383,7 @@ document.getElementById("none").addEventListener("click", function(event) {
 
 //color adjustments for dripping section svgs
 // all dripping sections should have the same background color (class) as the previous section
-(function adjustForDarkMode(){
+function adjustForDarkMode(){
   // find and select all dripping sections
   let drippingSections = document.querySelectorAll(".dripping-section");
   let svgArray = [`<svg xmlns="http://www.w3.org/2000/svg" width="4998" height="3243" viewBox="0 0 4998 3243" class="img-fluid">
@@ -409,7 +409,9 @@ document.getElementById("none").addEventListener("click", function(event) {
     // path needs to be filled with the same color as the Nextsection background color
     path.style.fill = nextSectionColor;   
   });
-})();
+};
+
+setTimeout(adjustForDarkMode,3000);
 
 
 
