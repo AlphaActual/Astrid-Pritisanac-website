@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atelier Astrid</title>
+    
+    <!-- font-awesome -->
+    <script src="./js/all.js"></script>
+    <!-- google fonts -->
+    <!-- font caveat -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">  
+    <!-- font pen -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <!-- Bootstrap compiled CSS -->
+    <link href="./css/main.css" rel="stylesheet" />
+    <!-- mystyle css -->
+    <link rel="stylesheet" href="./css/mystyle.css" />
+
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="90" tabindex="0" >
+
+  
+    <!-- navbar -->
+    <nav class="navbar navbar-light fixed-top navbar-expand-lg shadow-md py-2 py-lg-0 font-Caveat" id="main-navbar">
+      <div class="container-fluid">
+        <!-- company name -->
+        <a href="#" class="navbar-brand ms-3 fs-3">Astrid Pritišanac Atelje</a>
+
+        <!-- toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarLinks"
+          style="padding: 0;border: 0;"
+        >
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <!-- end of toggle button -->
+
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse justify-content-sm-center" id="navbarLinks">
+          <div class="navbar-nav text-center" id="navbar-content">
+            <div class="centering-div d-lg-flex mt-5 mt-lg-0 fs-4">
+
+              <a href="#banner" class="nav nav-link d-block m-3 mt-5 mt-lg-3">Početna</a>
+
+              <a href="#exhibitions" class="nav nav-link m-3 d-block text-nowrap">Izložbe</a>
+
+              <a href="#about" class="nav nav-link m-3 d-block text-nowrap">O nama</a>
+
+              <a href="#gallery" class="nav nav-link m-3 d-block text-nowrap">Galerija</a>
+
+              <a href="#contact" class="nav nav-link m-3 d-block text-nowrap">Kontakt</a>
+
+              <!-- lang buttons  -->
+              <div class="btn-group py-5 d-lg-none" role="group" aria-label="site language buttons">
+                <button type="button" class="btn text-danger">HR</button>
+                <span class="d-lg-none">/</span>
+                <button type="button" class="btn text-warning text-muted">EN</button>
+              </div>
+              <!-- end of lang buttons -->
+            </div>
+            
+          </div>
+        </div>
+        <!-- end of navbar links -->
+        
+        
+        <!-- lang buttons  -->
+          <button type="button" class="btn d-none d-lg-block text-danger">HR</button>
+          <span class="d-none d-lg-inline">/</span>
+          <button type="button" class="btn d-none d-lg-block me-1 text-muted">EN</button>
+        <!-- end of lang buttons -->
+
+        <!-- logo  -->
+        <a href="#" class="d-none d-lg-inline">
+          <img src="./img/LOGO/icon-corrected.png" class="" style="height: 70px; margin: 0; padding: 0" alt="logo"/>
+        </a>
+        <!-- end of logo -->
+    
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- main content -->
+    <main>
+
+      <!-- banner -->
+      <div id="banner">
+        <div class="container-fluid">
+          <div class="row height-100 align-items-center justify-content-center">
+            <div class="col text-center heading-painting">
+
+              <!-- painting -->
+              <!-- on small screen -->
+              <img src="./img/index-photos/Life-small.jpg" alt="Life painting" class="img-fluid d-sm-none p-2">
+              <!-- on medium screen -->
+              <img src="./img/index-photos/Life-md.jpg" alt="Life painting" class="img-fluid d-none d-sm-inline d-lg-none p-2 p-md-5">
+
+              <img src="./img/index-photos/Life-lg.jpg" alt="Life painting" class="img-fluid d-none d-lg-inline d-xl-none p-5">
+              <!-- on large screen -->
+              <img src="./img/index-photos/Life-sharp.jpg" alt="Life painting" class="img-fluid d-none d-xl-inline">
+
+              <a href="#welcome-section" class="nav-link text-danger mb-4 fadeIn d-inline-block"><i class="fas fa-chevron-circle-down fa-3x"></i></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of banner -->
+      
+      <!-- welcome section -->
+      <section id="welcome-section" class="py-5 bg-white font-Caveat">
+        <div class="container">
+          <div class="row height-100-nav">
+            <!-- title -->
+            <div class="row mb-4 mb-xl-2 mt-xll-5 justify-content-center">
+              <div class="col mx-auto text-center">
+                <h2 class="display-2 my-3 my-lg-5 text-danger font-Caveat d-block">Dobrodošli!</h2>     
+              </div>
+            </div>
+            <!-- end of title -->
+
+            <!-- content -->
+            <div class="row justify-content-center">
+
+              <!-- image col -->
+              <div class="col-md-10 col-lg-9 col-xxl-6 p-4">
+                <img src="./img/index-photos/Aterlier-1-frame-whites.jpg" alt="Atelje Astrid Pritišanac" class="img-fluid img-shadow bg-warning ">
+              </div>
+              <!-- text column -->
+              <div class="col-10 col-lg-8 col-xxl-6 p-2 p-md-5 my-5 mt-xxl-0 text-center">
+                <!-- logo image -->
+                <img src="./img/LOGO/LOGO surname shadow.png" alt="Atelje Astrid Pritišanac" class="img-fluid " style="width: 10rem;">
+
+                <!--welcome text paragraphs -->
+                <div class="welcome-text text-start  font-Caveat mt-4 fs-5">
+                  <p class="text-danger fs-4">Pozdrav dragi posjetitelju i dobrodošao u moj online atelje!</p>
+                  
+                  <p>
+                    Drago mi je da s tobom ovdje mogu podjeliti djelić svog dugogodišnjeg rada. Želja mi je da ova stranica služi kao trajna   galerija i nadahnuće svima koji ju posjete.
+                  </p>  
+
+                  <p>
+                    Od kada sam počela slikati pa sve do danas, kroz moj atelje prošlo je mnogo slika. Neke od njih imale su tu sreću da ostanu trajno zabilježene na brojnim fotografijama.
+                  </p>  
+                  
+                  <p>
+                    Njih i sve ostale koje će uz Božje nadahnuće još doći, želim objaviti u ovu virtualnu galeriju koja će se trajno proširivati novim radovima. Želim ti ugodan boravak u mom online ateljeu. Za sve upite i prijedloge uvijek sam na raspolaganju.
+                  </p>
+                  <p class="text-end">Astrid Pritišanac</p>
+                  
+                </div>
+                <!-- end of welcome text -->
+              </div>
+              <!-- end of text column -->
+            </div>
+            <!-- end of content -->
+            <!-- button row -->
+            <div class="row">
+              <div class="col text-center">
+                <a class="btn btn-lg buttonShadow my-nav-link col-10 col-md-8 col-lg-4 btn-danger mx-auto mt-5 text-white p-2 fs-2">Krenite u obilazak!</a>
+                <h2 class="py-5 font-Caveat">ILI</h2>
+                <a class="btn buttonShadow my-nav-link col-10 col-md-3 col-lg-2  btn-outline-primary fs-3 mt-md-4 mx-4">Galerija</a>
+                <a href="#exhibitions" class="btn buttonShadow my-nav-link col-10 col-md-3 col-lg-2  btn-outline-danger fs-3 mt-4 mt-md-0  mx-4">Izložbe</a>
+                <a class="btn buttonShadow my-nav-link col-10 col-md-3 col-lg-2  btn-outline-primary fs-3 mt-4 mx-4">Kontakt</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of welcome section -->
+
+      <!-- dripping section -->
+      <section  class="bg-danger">
+        
+          <img src="./img/index-photos/White-drip-v1.png" class="img-fluid" alt="">
+       
+      </section>
+      <!-- end of dripping section -->
+      
+      <!-- exhibitions section -->
+      <section id="exhibitions" class="bg-danger height-100 py-5">
+        <div class="container">
+          <div class="row">
+            <!-- title -->
+            <div class="row mb-4 mb-xl-2 mt-xll-5 justify-content-center">
+              <div class="col mx-auto text-center">
+                <h2 class="display-2 my-3 my-lg-5 text-white font-Caveat d-block">Moje izložbe</h2>     
+              </div>
+            </div>
+            <!-- end of title -->
+            <!-- content -->
+            <!-- row -->
+            <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
+              <div class="col img">
+                <div class="image-cont position-relative">
+                  <img src="./img/exhibition-galleries/Vines 25 cover corrected.jpg" alt="Vines gallery" class="img-fluid d-block img-shadow">
+                  <div class="overlay">
+                    <div class="text-overlay text-white font-Caveat"><h1 class="display-4">Ja sam Trs</h1></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col text text-white p-4 d-flex fadeIn">
+                <div class="centering-div align-self-center p-4 ">
+                  <h1 class="font-Caveat">Ja sam trs 2007</h1>
+                  <p class="fs-5">Moja prva izložba inspirirana stihovima iz Evanđelja po Ivanu 15. </p>
+                  <p class="fs-5"><i class="fas fa-quote-left fa-2x me-3"></i>Ja sam trs, vi loze. Tko ostaje u meni i ja u njemu, taj donosi mnogo roda. Uistinu, bez mene ne možete učiniti ništa." Ivan 15:5<i class="fas fa-quote-right fa-2x ms-3"></i></p>
+                </div>
+              </div>
+            </div>
+            <!-- end of row -->
+
+            <!-- row -->
+            <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
+              <div class="col text order-2 order-lg-1 text-white p-4 d-flex fadeIn">
+                <div class="centering-div align-self-center p-4 ">
+                  <h1 class="font-Caveat">Ljiljani 2011</h1>
+                  <p class="fs-5">Moja druga izložba inspirirana stihovima iz Evanđelja po Mateju 6. </p>
+                  <p class="fs-5"><i class="fas fa-quote-left fa-2x me-3"></i>"Promotrite poljske ljiljane, kako rastu! Ne muče se niti predu.
+                    A kažem vam: ni Salomon se u svoj svojoj slavi ne zaodjenu kao jedan od njih." Matej 6:28<i class="fas fa-quote-right fa-2x ms-3"></i></p>
+                </div>
+              </div>
+
+              <div class="col img order-1 order-lg-2">
+                <div class="image-cont position-relative">
+                  <img src="./img/exhibition-galleries/Lilies cover bronze.jpg" alt="Vines gallery" class="img-fluid d-block img-shadow">
+                  <div class="overlay">
+                    <div class="text-overlay text-white font-Caveat"><h1 class="display-4">Ljiljani</h1></div>
+                  </div>
+                </div>
+                  
+              </div>
+            </div>
+            <!-- end of row -->
+
+            <!-- row -->
+            <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
+              <div class="col img">
+                <div class="image-cont position-relative">
+                  <img src="./img/exhibition-galleries/Water Lilies cover.jpg" alt="Vines gallery" class="img-fluid d-block img-shadow">
+                  <div class="overlay">
+                    <div class="text-overlay text-white font-Caveat"><h1 class="display-4">Lopoči</h1></div>
+                  </div>
+                </div>
+                  
+              </div>
+              <div class="col text text-white p-4 d-flex fadeIn">
+                <div class="centering-div align-self-center p-4">
+                  <h1 class="font-Caveat">Lopoči 2020</h1>
+                  <p class="fs-5">Moja prva virtualna izložba inspirirana lopočima Kopačkog rita</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of row -->
+            
+          </div>
+        </div>
+        
+     
+      </section>
+      <!-- end of exhibitions section -->
+
+      <!-- dripping section -->
+      <section class="bg-white">
+              
+        <img src="./img/index-photos/Red-drip-v2.png" class="img-fluid" alt="">
+
+      </section>
+      <!-- end of dripping section -->
+
+      <!-- about section -->
+      <section id="about" class="py-5 bg-white">
+        <div class="container">
+          <div class="row">
+            <!-- title -->
+            <div class="row mb-4 mb-xl-2 mt-xll-5 justify-content-center">
+              <div class="col mx-auto text-center">
+                <h2 class="display-2 my-3 my-lg-5 text-danger font-Caveat d-block">O nama</h2>     
+              </div>
+            </div>
+            <!-- end of title -->
+
+            <!-- content -->
+            
+            <!-- row -->
+            <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
+              <div class="col-8 img p-4">
+                <div class="image-cont position-relative">
+                  <img src="./img/about/Astrid.jpg" alt="Astrid Pritišanac" class="img-fluid d-block rounded-circle">
+                </div>
+              </div>
+              <div class="col text p-4 d-flex fadeIn">
+                <div class="centering-div align-self-center p-4">
+                  <h1 class="font-Caveat">Astrid Pritišanac</h1>
+                  <p class="lead font-Caveat">Slikar, umjetnik, kreator </p>
+                  <p>Astrid Pritišanac rođena je Osječanka gdje živi i radi do 1998. godine, kada s obitelji seli u Bilje, gdje joj priroda i blizina Kopačkog rita postaju nadahnuće koje je prisutno od ranog djetinjstva, kada se uz oca, također slikara, uči slikati.</p>
+                  <p>
+                    Preseljenje je za Astrid prijelomni trenutak kada u prirodnom raju počinje intenzivno slikati, što kasnije prerasta u profesionalno slikarstvo.
+                  </p>
+                  <p>Omiljeni motivi su joj Kopački rit, baranjsko-slavonski motivi te motivi Jadrana. Radi više tehnika, a najdraža joj je ulje na platnu i lesonitu. Izlaže na više skupnih izložbi. Njene slike ukrašavaju interijere diljem svijeta.</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of row -->
+            <hr>
+            <!-- row -->
+            <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
+              <div class="col text order-2 order-lg-1 p-4 d-flex fadeIn">
+                <div class="centering-div align-self-center p-4 ">
+                  <h1 class="font-Caveat">Branko Pritišanac</h1>
+                  <p class="lead font-Caveat">Pjesnik, fotograf, trgovac </p>
+                  <p>Branko je Astridin suprug i srodna duša. Potpuno se posvetio potpori Astrid i rečeno njenim riječima: "Suprug mi je strog profesor, likovni kritičar, nabavljač, fotograf, ali prije svega umjetnik."</p>
+                  <p>Još od mladih dana piše poeziju i fotografira. Slike Astrid direktno su inspirirane njegovim nebrojenim fotografijama.</p>
+                  <p>Neke od njegovih pjesama objavljene su u našoj galeriji <a href="#about" class=" my-nav-link text-decoration-none text-dark"><h2 class="font-Caveat">Pjesme</h2></a></p>
+                </div>
+              </div>
+
+              <div class="col-8 img p-4 order-1 order-lg-2">
+                <div class="image-cont position-relative">
+                  <img src="./img/about/Branko.jpg" alt="Branko Pritišanac" class="img-fluid d-block rounded-circle">
+                </div>
+                  
+              </div>
+            </div>
+            <!-- end of row -->
+            
+            <!-- end of content -->
+          </div>
+        </div>
+      </section>
+      <!-- end of about section -->
+
+    
+
+      <!-- filler section -->
+      <section id="filler-1" class=" bg-danger">
+        <img src="./img/index-photos/White-brush-v1.png" class="img-fluid" alt="">
+
+      </section>
+      <!-- end of filler section -->
+
+      <!-- gallery section -->
+      <section id="gallery" class=" bg-danger height-100">
+        <div class="container">
+          <div class="row">
+            <!-- title -->
+            <div class="row mb-4 mb-xl-2 mt-xll-5 justify-content-center">
+              <div class="col mx-auto text-center">
+                <h2 class="display-2 my-3 my-lg-5 text-white font-Caveat d-block">Galerija</h2>     
+              </div>
+            </div>
+            <!-- end of title -->
+
+          </div>
+        </div>
+
+      </section>
+      <!-- end of gallery section -->
+
+
+
+
+
+
+
+
+
+      
+      
+
+
+
+
+
+    <!-- user painting section -->
+    <section id="user-painting" class="">
+      <div class="cont-img">
+        <img src="./img/index-photos/canvas-white.jpg" class="img-fluid" alt="">
+      </div>
+    </section>
+    <!-- end of user painting section -->
+
+    <!-- about section -->
+    <section id="about" class="bg-danger">
+      <div class="container-fluid height-100">
+        
+      </div>
+    </section>
+    <!--end of about section -->
+
+  </main>
+  <!-- end of main content -->
+
+  <!-- trails paint selector -->
+  
+  <div class="p-2 d-none d-lg-block z-10" id="brush-container" data-bs-placement="right" title="Tip: paint slowly!" data-bs-trigger="hover focus" data-bs-container="body">
+    <div class="btn-group-vertical" role="group" aria-label="paint buttons">
+      <button class="btn p-2 bg-primary" id="red">
+        <i class="fas fa-paint-brush fa-1x text-danger"></i>
+      </button>
+      <button class="btn p-2 bg-primary" id="yellow">
+        <i class="fas fa-paint-brush fa-1x text-warning"></i>
+      </button>
+      <button class="btn p-2 bg-primary" id="blue">
+        <i class="fas fa-paint-brush fa-1x text-blue "></i>
+      </button> 
+      <button class="btn p-2 bg-primary" id="colorPickButton">
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+      </button> 
+      <button class="btn p-2 bg-primary " id="pause-btn" data-bs-placement="right" title="Pause painting on click" data-bs-trigger="hover focus" data-bs-container="body">
+        <i class="fas fa-pause fa-1x text-light"></i>
+      </button> 
+      <button class="btn p-2 bg-primary " id="off-btn" data-bs-placement="right" title="Clear all and stop painting" data-bs-trigger="hover focus" data-bs-container="body">
+        <i class="fas fa-power-off fa-1x text-light"></i>
+      </button> 
+    </div>
+  </div>
+    
+    <script src="./js/bootstrap.bundle.min.js" defer></script>
+    <script src="./js/myScript.js" defer></script>
+  </body>
+</html>

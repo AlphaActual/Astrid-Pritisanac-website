@@ -1,0 +1,205 @@
+ :root{
+   --primary: #0A2463;
+   --danger: #FF4040;
+ }
+
+ 
+ html,body {
+    
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+} 
+
+
+
+
+body {
+  cursor: url("../img/pointer/brush1Fs.png"), auto !important;
+  position: relative;
+  
+}
+a, button{
+  cursor: url("../img/pointer/brush2Fs.png"), auto !important;
+}
+.buttonShadow{
+  box-shadow: 0px 7px 7px -5px rgba(0,0,0,0.8);
+}
+.img-shadow{
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82); 
+box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
+}
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom fonts */
+.font-Caveat{
+  font-family: 'Caveat', cursive;
+}
+.font-Libre{
+  font-family: 'Libre Baskerville', serif;
+}
+.font-Pen{
+  font-family: 'Nanum Pen Script', cursive;
+}
+/* end of Custom fonts */
+
+/* custom heights and widths */
+.height-100 {
+  min-height: 100vh;
+}
+.height-100-nav {
+  min-height: calc(100vh - 90px);
+}
+.height-80 {
+  min-height: 80vh;
+}
+.width-100{
+  min-width: 10rem;
+}
+.z-10{
+  z-index: 10;
+};
+
+
+
+.navbar{
+  transition: background-color 0.5s;
+  min-height: 50px;
+}
+
+.lang-divider{
+  background-color: black;
+  width: 3px;
+  height: 2rem;
+}
+
+
+.nav-item{
+  margin: 0;
+}
+
+
+#banner{
+  background-color: white;
+  /* background-image:linear-gradient(to top, rgba(255, 255, 255, 0) 3% ,rgb(241, 0, 169,0) 10%), url(../img/index-photos/Life.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;
+}
+
+.image-cont:hover .overlay {
+  opacity: 0.9;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#filler-1{
+  
+  
+}
+#gallery{
+  
+}
+
+
+/* ///// EFFECTS ///// */
+/* opacity fade in effect animation */
+.fadeIn {
+  /* setting default element opacity */
+  opacity: 0;
+}
+
+.animateFadeIn {
+  animation: opac 2s;
+  animation-fill-mode: forwards; /*The element will retain the style values that is set by the last keyframe (opacity:1) */
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* slide in effect animation */
+.slideMe {
+  position: relative;
+}
+.animateSlide {
+  animation: slide 2s;
+}
+
+@keyframes slide {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+/* for mouse trail animation */
+.MouseTrail {
+  position: absolute;
+  height: 7px; width: 7px;
+  border-radius: 4px;
+  background: rgb(230, 7, 7);
+}
+
+ /* color selector */
+#favcolor{
+ margin : 0;
+ padding: 0;
+ width: 20px;
+ height: 20px;
+ border: none;
+}
+
+
+
+/* to make the navbar open full screen on colapsed view */
+@media (max-width: 992px) {
+  #navbar-content {
+    min-height: 100vh;
+  }
+}
+
+#brush-container{
+  position: fixed;
+  top:50%;
+  transform: translate(0%,-50%); 
+  -webkit-transform: translate(0%,-50%);
+  -ms-transform: translate(0%,-50%);
+}
+ /* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}  */
+
