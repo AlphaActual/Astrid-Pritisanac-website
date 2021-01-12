@@ -382,7 +382,7 @@ document.getElementById("none").addEventListener("click", function(event) {
 // })
 
 //color adjustments for dark mode
-(function adjustForDarkMode(){
+function adjustForDarkMode(){
   // find and select all dripping sections
   let drippingSections = document.querySelectorAll(".dripping-section");
 
@@ -398,8 +398,11 @@ document.getElementById("none").addEventListener("click", function(event) {
     
     
   });
-})();
+};
 
+window.addEventListener('DOMContentLoaded', (event) => {
+  adjustForDarkMode();
+});
 
 
 
