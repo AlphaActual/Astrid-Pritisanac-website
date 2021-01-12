@@ -374,36 +374,31 @@ document.getElementById("none").addEventListener("click", function(event) {
 })();
 // end of DRAW LOGIC
 
-//tooltips
+//tooltips FIX
 
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+// var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+// var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+//   return new bootstrap.Tooltip(tooltipTriggerEl)
+// })
 
-// color adjustments for dark mode
-// (function adjustForDarkMode() {
-//     // 1. obtain colors from the welcome section and exhibitionSection
-//   let welcomeSection = document.getElementById("welcome-section");
-//   let exhibitionsSection = document.getElementById("exhibitions");
-//   let color1 = window.getComputedStyle(welcomeSection).backgroundColor;
-//   let color2 = window.getComputedStyle(exhibitionsSection).backgroundColor;
-//   // get all dripping sections that have the svg within
-//   let drippingSections = document.querySelectorAll(".dripping-section");
+//color adjustments for dark mode
+(function adjustForDarkMode(){
+  // find and select all dripping sections
+  let drippingSections = document.querySelectorAll(".dripping-section");
 
-//   drippingSections.forEach((section)=>{
-//     // get the background of the targeted section
-//     let sectionColor = window.getComputedStyle(section).backgroundColor;
-//     // select 2 paths within it
-//     let paths = section.querySelectorAll("path");
-//     // first path needs to be filled with the same color as the section background
-//     paths[0].style.fill = sectionColor;
-//     // second path needs to be filled with the other color
-//     if (color1 === sectionColor) {
-//       paths[1].style.fill = color2;
-//     }else{paths[1].style.fill = color1;}
-//   });
-// })();
+  drippingSections.forEach((section)=>{
+     //get the background of the next section
+    let nextSection = section.nextElementSibling;
+    console.log(section);
+    let nextSectionColor = window.getComputedStyle(nextSection).backgroundColor;
+    // select path within the section to fill it with color
+    let path = section.querySelector("path");
+    // path needs to be filled with the same color as the Nextsection background color
+    path.style.fill = nextSectionColor;
+    
+    
+  });
+})();
 
 
 
