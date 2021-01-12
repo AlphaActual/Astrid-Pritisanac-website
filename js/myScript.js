@@ -407,11 +407,12 @@ function adjustForDarkMode(){
     // select path within the section to fill it with color
     let path = section.querySelector("path");
     // path needs to be filled with the same color as the Nextsection background color
-    path.style.fill = nextSectionColor;   
+    path.style.fill = nextSectionColor + "!important";   
   });
+  
 };
 
-setTimeout(adjustForDarkMode,3000);
+
 
 
 
