@@ -10642,11 +10642,15 @@ a:hover, button:hover {
 }
 
 .cls-1 {
-  fill: #FF4040;
+  fill: white;
 }
 
 .cls-2 {
-  fill: #fff;
+  fill: #FF4040;
+}
+
+.cls-1, .cls-2 {
+  fill-rule: evenodd;
 }
 
 /*# sourceMappingURL=main.css.map */
