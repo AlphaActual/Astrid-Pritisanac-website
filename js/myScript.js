@@ -374,12 +374,13 @@ document.getElementById("none").addEventListener("click", function(event) {
 })();
 // end of DRAW LOGIC
 
-//tooltips FIX
-
-// var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-// var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-//   return new bootstrap.Tooltip(tooltipTriggerEl)
-// })
+//tooltips 
+(function tooltips() {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  });
+})();
 
 //color adjustments for dripping section svgs
 // all dripping sections should have the same background color (class) as the previous section

@@ -100,8 +100,10 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;
+  
 }
+.overlay-bg-1{background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
+.overlay-bg-2{background-image: linear-gradient(to bottom ,var(--primary), var(--danger),var(--primary)) ;}
 
 .image-cont:hover .overlay {
   opacity: 0.9;
@@ -117,7 +119,18 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
   text-align: center;
 }
 
+.roundMe li {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+}
 
+.title-row-1{
+  background-image: url(../img/Gallery/2B9DCMG.jpg);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
 
 
 /* ///// EFFECTS ///// */
