@@ -116,7 +116,7 @@
       <!-- end of banner -->
       
       <!-- welcome section -->
-      <section id="welcome-section" class="py-5 bg-white font-Caveat">
+      <section id="welcome-section" class="py-5 bg-white  font-Caveat">
         <div class="container">
           <div class="row height-100-nav">
             <!-- title -->
@@ -189,8 +189,8 @@
         <div class="container">
           <div class="row">
             <!-- title -->
-            <div class="row mb-4 mb-xl-2 mt-xll-5 justify-content-center">
-              <div class="col mx-auto text-center">
+            <div class="row mb-5 mt-xll-5 justify-content-center">
+              <div class="col mx-auto text-center custom-bg-1 my-5">
                 <h2 class="display-2 my-3 my-lg-5 text-white font-Caveat d-block">Moje izložbe</h2>     
               </div>
             </div>
@@ -278,11 +278,13 @@
         <div class="container">
           <div class="row">
             <!-- title -->
+            <div class="margin-div my-2 my-lg-5"></div>
             <div class="row mb-4 mb-xl-2 mt-xll-5 justify-content-center">
-              <div class="col mx-auto text-center">
-                <h2 class="display-2 my-lg-5 text-danger font-Caveat d-block">O nama</h2>     
+              <div class="col mx-auto text-center custom-bg-1">
+                <h2 class="display-2 my-lg-5 text-white font-Caveat d-block">O nama</h2>     
               </div>
             </div>
+            <div class="margin-div my-2 my-lg-5"></div>
             <!-- end of title -->
 
             <!-- content -->
@@ -291,7 +293,7 @@
             <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
               <div class="col-10 img p-4">
                 <div class="image-cont position-relative">
-                  <img src="./img/about/Astrid.jpg" alt="Astrid Pritišanac" class="img-fluid d-block rounded-circle">
+                  <img src="./img/about/Astrid.jpg" alt="Astrid Pritišanac" class="img-fluid d-block rounded-circle img-shadow">
                 </div>
               </div>
               <div class="col text p-lg-4 d-flex fadeIn">
@@ -322,7 +324,7 @@
 
               <div class="col-10 img p-4 order-1 order-lg-2">
                 <div class="image-cont position-relative">
-                  <img src="./img/about/Branko.jpg" alt="Branko Pritišanac" class="img-fluid d-block rounded-circle">
+                  <img src="./img/about/Branko.jpg" alt="Branko Pritišanac" class="img-fluid d-block img-shadow rounded-circle">
                 </div>
                   
               </div>
@@ -331,16 +333,18 @@
             <hr>
             <!-- painting techniques -->
              <!-- title -->
-             <div class="row  my-5 justify-content-center align-items-center">
-              <div class="col text-center">
-                <h2 class="display-2 my-lg-5 text-danger font-Caveat d-block">Slikarske tehnike</h2>     
+             <div class="margin-div my-2 my-lg-5"></div>
+              <div class="row my-5 justify-content-center align-items-center custom-bg-1">
+                <div class="col text-center">
+                  <h2 class="display-2 p-3  my-lg-4 text-white font-Caveat d-block">Slikarske tehnike</h2>     
+                </div>
               </div>
-            </div>
+              <div class="margin-div my-2 my-lg-5"></div>
             <!-- end of title -->
-            <div class="row row-cols-1 row-cols-md-2">
+            <div class="row row-cols-1 row-cols-lg-2">
               <!-- single card column -->
-              <div class="col p-5">
-                <div class="card">
+              <div class="col my-5">
+                <div class="card h-100 bg-danger ">
                   <!-- carousel -->
                   <div id="carouselIndicators-1" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <!-- <ol class="carousel-indicators">
@@ -366,8 +370,8 @@
                     </a>
                   </div>
                   <!-- end of carousel -->
-                  <div class="card-body">
-                    <h5 class="card-title font-Caveat fs-4">Ulje na slikarskom platnu</h5>
+                  <div class="card-body text-white p-5">
+                    <h5 class="card-title font-Caveat fs-3">Ulje na slikarskom platnu</h5>
                     <p class="card-text">Jedna od najpoznatijih slikarskih tehnika  ujedno je i primarna tehnika u kojoj radimo</p>
                     <p class="card-text">Glavni alat je slikarska špahkla</p>
                     <p class="card-text">Raspon dimenzija s kojima najčešće radimo je: AA x BB x CC  - DD x EE x FF</p>
@@ -378,8 +382,8 @@
               <!-- end of single card column -->
 
               <!-- single card column -->
-              <div class="col p-5">
-                <div class="card">
+              <div class="col my-5">
+                <div class="card bg-primary text-white h-100 ">
                   <!-- carousel -->
                   <div id="carouselIndicators-2" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <!-- <ol class="carousel-indicators">
@@ -404,8 +408,8 @@
                     </a>
                   </div>
                   <!-- end of carousel -->
-                  <div class="card-body">
-                    <h5 class="card-title font-Caveat fs-4">Ulje na slikarskom lesonitu</h5>
+                  <div class="card-body p-5">
+                    <h5 class="card-title font-Caveat fs-3">Ulje na slikarskom lesonitu</h5>
                     <p class="card-text">Tehnika je ista kao kod slikarskog platna, no ovdje je podloga slikarski lesonit.</p>
                     <p class="card-text">Prednosti su mu manja debljina i cijena u odnosu na platno, no kvaliteta slike je i dalje vrhunska.</p>
                     <p class="card-text">Raspon dimenzija s kojima najčešće radimo je: AA x BB x CC  - DD x EE x FF</p>
@@ -418,34 +422,31 @@
             </div>
             <!-- end of content -->
           </div>
+          <hr class="mt-5">
         </div>
       </section>
       <!-- end of about section -->
 
-    
+      
 
-      <!-- dripping section 3-->
-      <section class="dripping-section bg-white">
-        <!-- JS will insert SVG here -->
-        <!-- background color of the section should be the same as of the previous section -->
-      </section>
-      <!-- end of dripping section -->
+      
 
       <!-- gallery section -->
-      <section id="gallery" class=" bg-warning height-100 py-5">
+      <section id="gallery" class=" bg-white height-100 py-5">
         <div class="container">
           <div class="row">
             <!-- title -->
-            <div class="row mb-4 mb-xl-2 mt-xll-5 justify-content-center title-row-1">
+            <div class="row mb-5 mb-xl-5 mt-xl-5 justify-content-center custom-bg-1">
               <div class="col text-center">
-                <h2 class="display-2 my-3 my-lg-5 text-danger font-Caveat d-block">Galerije</h2>     
+                <h2 class="display-2 my-3  my-lg-5 text-white font-Caveat d-block">Galerije</h2>     
               </div>
             </div>
+            <div class="margin-div my-2 my-lg-5"></div>
             <!-- end of title -->
             <!-- content -->
             <!-- row -->
             <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
-              <div class="col img">
+              <div class="col col-lg-8 img ">
                 <div class="image-cont position-relative">
                   <img src="./img//Gallery/Landcape-cover-resized.jpg" alt="Vines gallery" class="img-fluid d-block img-shadow">
                   <div class="overlay overlay-bg-2">
@@ -454,7 +455,7 @@
                 </div>
               </div>
 
-              <div class="col text text-white p-lg-4 d-flex fadeIn text-center">
+              <div class="col col-lg-4 text p-lg-4 d-flex fadeIn text-center">
                 <div class="centering-div align-self-center  p-4 ">
                   <h1 class="font-Caveat display-3">Pejzaži</h1>
                   <p class="fs-5">Motivi Kopačkog Rita, Stare Drave, slavonskih polja, šuma i zaseoka </p>
@@ -465,14 +466,14 @@
 
             <!-- row -->
             <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
-              <div class="col text order-2 order-lg-1 text-white p-lg-4 d-flex align-items-center justify-content-center fadeIn text-center">
+              <div class="col col-lg-4 text order-2 order-lg-1  p-lg-4 d-flex align-items-center justify-content-center fadeIn text-center">
                 <div class="centering-div p-4">
                   <h1 class="font-Caveat display-3">Jadran</h1>
                   <p class="fs-5">Motivi Jadrana i Maslinika</p>
                 </div>
               </div>
 
-              <div class="col img order-1 order-lg-2">
+              <div class="col col-lg-8 img order-1 order-lg-2">
                 <div class="image-cont position-relative">
                   <img src="./img/Gallery/Adriatic-cover-resized.jpg" alt="Galerija Jadran" class="img-fluid d-block img-shadow">
                   <div class="overlay overlay-bg-2">
@@ -486,29 +487,99 @@
 
             <!-- row -->
             <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
-              <div class="col img">
+              <div class="col col-lg-8 img">
                 <div class="image-cont position-relative">
-                  <img src="./img/exhibition-galleries/Water Lilies cover.jpg" alt="Vines gallery" class="img-fluid d-block img-shadow">
+                  <img src="./img/Gallery/Still-life-cover.jpg" alt="Vines gallery" class="img-fluid d-block img-shadow">
                   <div class="overlay overlay-bg-2">
                     <div class="text-overlay text-white font-Caveat"><h1 class="display-4">Otvori Galeriju</h1></div>
                   </div>
                 </div>
                   
               </div>
-              <div class="col text text-white p-4 d-flex fadeIn">
+              <div class="col col-lg-4 text  p-4 d-flex fadeIn text-center justify-content-center">
                 <div class="centering-div align-self-center p-lg-4">
-                  <h1 class="font-Caveat">Lopoči 2020</h1>
-                  <p class="fs-5">Moja prva virtualna izložba inspirirana lopočima Kopačkog rita</p>
+                  <h1 class="font-Caveat display-3">Mrtva priroda</h1>
+                  <!-- <p class="fs-5"></p> -->
                 </div>
               </div>
             </div>
             <!-- end of row -->
+
+            <!-- row -->
+            <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
+              <div class="col col-lg-4 text order-2 order-lg-1  p-lg-4 d-flex align-items-center justify-content-center fadeIn text-center">
+                <div class="centering-div p-4">
+                  <h1 class="font-Caveat display-4">Crno-Bijelo <span class="text-danger">u Boji</span> </h1>
+                  <p class="fs-5">Razni motivi u stilu crno-bijelo-u boji </p>
+                </div>
+              </div>
+
+              <div class="col col-lg-8 img order-1 order-lg-2">
+                <div class="image-cont position-relative">
+                  <img src="./img/Gallery/Black and White in Color cover2.jpg" alt="Galerija Jadran" class="img-fluid d-block img-shadow">
+                  <div class="overlay overlay-bg-2">
+                    <div class="text-overlay text-white font-Caveat"><h1 class="display-4">Otvori Galeriju</h1></div>
+                  </div>
+                </div>
+                  
+              </div>
+            </div>
+            <!-- end of row -->
+
+            <!-- row -->
+            <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
+              <div class="col col-lg-8 img">
+                <div class="image-cont position-relative">
+                  <img src="./img/Gallery/Abstract cover.jpg" alt="Vines gallery" class="img-fluid d-block img-shadow">
+                  <div class="overlay overlay-bg-2">
+                    <div class="text-overlay text-white font-Caveat"><h1 class="display-4">Otvori Galeriju</h1></div>
+                  </div>
+                </div>
+                  
+              </div>
+              <div class="col col-lg-4 text  p-4 d-flex fadeIn text-center justify-content-center">
+                <div class="centering-div align-self-center p-lg-4">
+                  <h1 class="font-Caveat display-3">
+                    <span class="text-primary">A</span><span class="text-warning">p</span><span class="text-danger">s</span><span class="text-info">t</span><span class="text-success">r</span><span class="text-danger">a</span><span class="text-primary">k</span><span class="text-warning">c</span><span class="text-info">i</span><span class="text-warning">j</span><span class="text-danger">e</span>
+                  </h1>
+                  <p class="fs-5">Apstraktni motivi</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of row -->
+              <hr class="my-5">
+             <!-- row -->
+             <div class="row row-cols-1 justify-content-center my-5">
+              <div class="col col-lg-8 img">
+                <div class="image-cont position-relative">
+                  <img src="./img/Gallery/Pjesme cover.jpg" alt="Vines gallery" class="img-fluid d-block img-shadow">
+                  <div class="overlay overlay-bg-2">
+                    <div class="text-overlay text-white font-Caveat"><h1 class="display-4">Otvori Galeriju</h1></div>
+                  </div>
+                </div>
+                  
+              </div>
+              <div class="col-12  text  p-4 d-flex fadeIn text-center justify-content-center">
+                <div class="centering-div align-self-center p-lg-4">
+                  <h1 class="font-Caveat text-danger display-3">Pjesme</h1>
+                  <p class="fs-5">Bunar Duše</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of row -->
+            
           </div>
         </div>
 
       </section>
       <!-- end of gallery section -->
 
+      <!-- dripping section 3-->
+      <section class="dripping-section bg-white">
+        <!-- JS will insert SVG here -->
+        <!-- background color of the section should be the same as of the previous section -->
+      </section>
+      <!-- end of dripping section -->
 
 
 
@@ -525,15 +596,15 @@
 
 
     <!-- user painting section -->
-    <section id="user-painting" class="">
+    <!-- <section id="user-painting" class="">
       <div class="cont-img">
         <img src="./img/index-photos/canvas-white.jpg" class="img-fluid" alt="">
       </div>
-    </section>
+    </section> -->
     <!-- end of user painting section -->
 
     <!-- about section -->
-    <section id="about" class="bg-danger">
+    <section class="custom-bg-2">
       <div class="container-fluid height-100">
         
       </div>

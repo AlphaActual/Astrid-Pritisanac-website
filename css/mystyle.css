@@ -1,6 +1,8 @@
  :root{
    --primary: #0A2463;
    --danger: #FF4040;
+   --white: white;
+   --black:black;
  }
 
  
@@ -11,6 +13,7 @@
     padding: 0px;
     
 } 
+
 
 
 
@@ -103,7 +106,7 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
   
 }
 .overlay-bg-1{background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
-.overlay-bg-2{background-image: linear-gradient(to bottom ,var(--primary), var(--danger),var(--primary)) ;}
+.overlay-bg-2{background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
 
 .image-cont:hover .overlay {
   opacity: 0.9;
@@ -125,12 +128,21 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
   border-radius: 50%;
 }
 
-.title-row-1{
-  background-image: url(../img/Gallery/2B9DCMG.jpg);
+.custom-bg-1{
+  background-image: url(../img/Gallery/paint-trail-final.png);
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+.custom-bg-2{
+  background-image: url(../img/index-photos/atelier.jpg);
   background-position: center;
   background-size:cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+
 
 
 /* ///// EFFECTS ///// */
