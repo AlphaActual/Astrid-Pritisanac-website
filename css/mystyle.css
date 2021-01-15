@@ -31,7 +31,7 @@ a, button{
 }
 .img-shadow{
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82); 
-box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
+  box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
 }
 .row{
   margin: 0;
@@ -74,6 +74,7 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
   min-height: 50px;
 }
 
+
 .lang-divider{
   background-color: black;
   width: 3px;
@@ -108,8 +109,20 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
 .overlay-bg-1{background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
 .overlay-bg-2{background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
 
-.image-cont:hover .overlay {
+.image-cont:hover .overlay, .image-cont-scale:hover .overlay {
   opacity: 0.9;
+}
+.image-cont, .image-cont-scale{
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82); 
+  box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
+
+}
+.image-cont-scale{
+  transition: transform .5s;
+}
+.image-cont-scale:hover{
+  transform: scale(1.02);
 }
 
 .text-overlay {
@@ -122,11 +135,6 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
   text-align: center;
 }
 
-.roundMe li {
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 50%;
-}
 
 .custom-bg-1{
   background-image: url(../img/Gallery/paint-trail-final.png);
@@ -135,13 +143,24 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
   background-repeat: no-repeat;
 }
 .custom-bg-2{
-  background-image: url(../img/index-photos/atelier.jpg);
+  background-image: url(../img/Gallery/paint-trail-primary.png);
   background-position: center;
-  background-size:cover;
+  background-size:contain;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  
 }
 
+#Landscapes-title, #Adriatic-title, #StillLife-title, #Pjesme-title{
+  background: -webkit-linear-gradient(right, var(--danger),var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#BlackAndWhite-title{
+  width: 50%;
+  background: -webkit-linear-gradient(right, var(--danger),yellow);
+  -webkit-background-clip:text ;
+  -webkit-text-fill-color:transparent ;
+}
 
 
 
@@ -166,20 +185,33 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
   }
 }
 /* slide in effect animation */
-.slideMe {
+.slideMeRight, .slideMeLeft {
   position: relative;
 }
-.animateSlide {
-  animation: slide 2s;
+.animateSlideRight {
+  animation: slide-right 2s;
+}
+.animateSlideLeft {
+  animation: slide-left 2s;
 }
 
-@keyframes slide {
+@keyframes slide-right {
   from {
-    right: -300px;
+    right: -200px;
     opacity: 0;
   }
   to {
     right: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  from {
+    left: -200px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
     opacity: 1;
   }
 }
@@ -193,10 +225,8 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
 
  /* color selector */
 #favcolor{
- margin : 0;
- padding: 0;
- width: 20px;
- height: 20px;
+ width: 100%;
+ height: 33px;
  border: none;
 }
 
