@@ -1,0 +1,303 @@
+ :root{
+   --primary: #0A2463;
+   --danger: #FF4040;
+   --white: white;
+   --black:black;
+ }
+
+ 
+ html,body {
+    
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+} 
+
+
+
+
+
+body {
+  cursor: url("../img/pointer/brush1Fs.png"), auto !important;
+  position: relative;
+  
+}
+a, button{
+  cursor: url("../img/pointer/brush2Fs.png"), auto !important;
+}
+.buttonShadow{
+  box-shadow: 0px 7px 7px -5px rgba(0,0,0,0.8);
+}
+.img-shadow{
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82); 
+  box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
+}
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom fonts */
+.font-Caveat{
+  font-family: 'Caveat', cursive;
+}
+.font-Libre{
+  font-family: 'Libre Baskerville', serif;
+}
+.font-Pen{
+  font-family: 'Nanum Pen Script', cursive;
+}
+.font-Times{
+  font-family: 'Times New Roman', Times, serif;
+}
+/* end of Custom fonts */
+
+/* custom heights and widths */
+.height-100 {
+  min-height: 100vh;
+}
+.height-100-nav {
+  min-height: calc(100vh - 90px);
+}
+.height-80 {
+  min-height: 80vh;
+}
+.max-height-80{
+  max-height: 80vh !important;
+};
+.width-100{
+  min-width: 10rem;
+}
+.z-10{
+  z-index: 10;
+};
+
+
+
+.navbar{
+  transition: background-color 0.5s;
+  min-height: 50px;
+}
+
+
+.lang-divider{
+  background-color: black;
+  width: 3px;
+  height: 2rem;
+}
+
+
+.nav-item{
+  margin: 0;
+}
+
+
+#banner{
+  background-color: white;
+  /* background-image:linear-gradient(to top, rgba(255, 255, 255, 0) 3% ,rgb(241, 0, 169,0) 10%), url(../img/index-photos/Life.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  
+}
+.overlay-bg-1{background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
+.overlay-bg-2{background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
+
+.image-cont:hover .overlay, .image-cont-scale:hover .overlay {
+  opacity: 0.9;
+}
+
+.image-cont-shadow{
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82); 
+  box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
+}
+.image-cont-scale{
+  transition: transform .5s;
+}
+.image-cont-scale:hover{
+  transform: scale(1.02);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.custom-bg-1{
+  background-image: url(../img/Gallery/paint-trail-final.png);
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+.custom-bg-2{
+  background-image: url(../img/index-photos/tubes.jpg);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  
+}
+.custom-bg-3{
+  background:-webkit-linear-gradient(right, var(--danger),var(--primary)30% 70%,var(--danger));
+}
+.text-gradient-1{
+  background: -webkit-linear-gradient(right, var(--danger),var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.BlackAndWhite-title{
+  width: 50%;
+  background: -webkit-linear-gradient(right, var(--danger),yellow);
+  -webkit-background-clip:text ;
+  background-clip: text;
+  -webkit-text-fill-color:transparent ;
+}
+#vinesExhibitionPhotos{
+  background-image: url(../img/Gallery/stand-shadow.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
+
+
+
+/* ///// EFFECTS ///// */
+/* opacity fade in effect animation */
+.fadeIn {
+  /* setting default element opacity */
+  opacity: 0;
+}
+
+.animateFadeIn {
+  animation: opac 2s;
+  animation-fill-mode: forwards; /*The element will retain the style values that is set by the last keyframe (opacity:1) */
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* slide in effect animation */
+.slideMeRight, .slideMeLeft, .slideMeBottom {
+  position: relative;
+}
+.animateSlideRight {
+  animation: slide-right 2s;
+}
+.animateSlideLeft {
+  animation: slide-left 2s;
+}
+.animateSlideBottom {
+  animation: slide-bottom 1s;
+}
+
+@keyframes slide-right {
+  from {
+    right: -200px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  from {
+    left: -200px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slide-bottom {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+/* for mouse trail animation */
+.MouseTrail {
+  position: absolute;
+  height: 7px; width: 7px;
+  border-radius: 4px;
+  background: rgb(230, 7, 7);
+}
+
+ /* color selector */
+#favcolor{
+ width: 100%;
+ height: 33px;
+ border: none;
+}
+
+
+
+/* to make the navbar open full screen on colapsed view */
+@media (max-width: 992px) {
+  #navbar-content {
+    min-height: 100vh;
+  }
+}
+
+#brush-container{
+  position: fixed;
+  top:50%;
+  transform: translate(0%,-50%); 
+  -webkit-transform: translate(0%,-50%);
+  -ms-transform: translate(0%,-50%);
+}
+
+/* scroll to top button */
+.top-link {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(255,255,255,0.3) ;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: -100;
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+ * {
+  
+  /* outline: solid #f00 1px !important; */
+} 
+
