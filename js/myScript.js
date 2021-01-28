@@ -152,8 +152,8 @@ function scrollToElement(event, elementID = 0) {
 function storeIdAndRedirect(id) {
   // store id
   localStorage.setItem("scrollElementID", id);
-  // redirect
-  window.location.assign("../index.html");
+  // redirect to index.html - had to put absolute path here to avoid 404 error
+  window.location.assign("https://alphaactual.github.io/Astrid-Pritisanac-website/");
 
 };
 // on page load check if there is some element ID in the storage
