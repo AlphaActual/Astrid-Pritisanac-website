@@ -48,6 +48,9 @@ a, button{
 .font-Pen{
   font-family: 'Nanum Pen Script', cursive;
 }
+.font-Times{
+  font-family: 'Times New Roman', Times, serif;
+}
 /* end of Custom fonts */
 
 /* custom heights and widths */
@@ -60,6 +63,9 @@ a, button{
 .height-80 {
   min-height: 80vh;
 }
+.max-height-80{
+  max-height: 80vh !important;
+};
 .width-100{
   min-width: 10rem;
 }
@@ -112,11 +118,10 @@ a, button{
 .image-cont:hover .overlay, .image-cont-scale:hover .overlay {
   opacity: 0.9;
 }
-.image-cont, .image-cont-scale{
 
+.image-cont-shadow{
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82); 
   box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
-
 }
 .image-cont-scale{
   transition: transform .5s;
@@ -143,24 +148,37 @@ a, button{
   background-repeat: no-repeat;
 }
 .custom-bg-2{
-  background-image: url(../img/Gallery/paint-trail-primary.png);
+  background-image: url(../img/index-photos/tubes.jpg);
   background-position: center;
-  background-size:contain;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  
+}
+.custom-bg-3{
+  background:-webkit-linear-gradient(right, var(--danger),var(--primary)30% 70%,var(--danger));
+}
+.text-gradient-1{
+  background: -webkit-linear-gradient(right, var(--danger),var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.BlackAndWhite-title{
+  width: 50%;
+  background: -webkit-linear-gradient(right, var(--danger),yellow);
+  -webkit-background-clip:text ;
+  background-clip: text;
+  -webkit-text-fill-color:transparent ;
+}
+#vinesExhibitionPhotos{
+  background-image: url(../img/Gallery/stand-shadow.png);
+  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
   
 }
 
-#Landscapes-title, #Adriatic-title, #StillLife-title, #Pjesme-title{
-  background: -webkit-linear-gradient(right, var(--danger),var(--primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-#BlackAndWhite-title{
-  width: 50%;
-  background: -webkit-linear-gradient(right, var(--danger),yellow);
-  -webkit-background-clip:text ;
-  -webkit-text-fill-color:transparent ;
-}
 
 
 
@@ -185,7 +203,7 @@ a, button{
   }
 }
 /* slide in effect animation */
-.slideMeRight, .slideMeLeft {
+.slideMeRight, .slideMeLeft, .slideMeBottom {
   position: relative;
 }
 .animateSlideRight {
@@ -193,6 +211,9 @@ a, button{
 }
 .animateSlideLeft {
   animation: slide-left 2s;
+}
+.animateSlideBottom {
+  animation: slide-bottom 1s;
 }
 
 @keyframes slide-right {
@@ -212,6 +233,16 @@ a, button{
   }
   to {
     left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slide-bottom {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
     opacity: 1;
   }
 }
@@ -246,9 +277,27 @@ a, button{
   -webkit-transform: translate(0%,-50%);
   -ms-transform: translate(0%,-50%);
 }
- /* * {
-  background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-}  */
+
+/* scroll to top button */
+.top-link {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(255,255,255,0.3) ;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: -100;
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+ * {
+  
+  /* outline: solid #f00 1px !important; */
+} 
 
