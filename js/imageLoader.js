@@ -142,7 +142,7 @@
                 });
 
                 // listen for keyboard buttons (arrows)
-                const modal = document.querySelector(".modal")
+                const modal = document.querySelector(".modal");
                 modal.addEventListener("keydown", function (e) {
 
                     if (e.keyCode === 37) {
@@ -151,6 +151,22 @@
                         loadImage();
                     };
 
+                });
+                // listen for swipe events (for touch screens)
+
+                let swipeElement = modal.querySelector(".gallery-image");
+                var mc = new Hammer(swipeElement);
+
+                // listen to events...
+                mc.on("swipeleft swiperight", function (ev) {
+
+                    if (ev.type === "swipeleft") {
+                        loadImage("previous")
+
+                    } else if (ev.type === "swiperight") {
+                        loadImage();
+
+                    };
                 });
 
                 function loadImage(direction) {
@@ -185,19 +201,7 @@
                     modal.querySelector(".modal-title").textContent = newImage.alt;
 
                 };
-                // listen for swipe events (for touch screens)
 
-                let swipeElement = modal.querySelector(".gallery-image");
-                var mc = new Hammer(swipeElement);
-
-                // listen to events...
-                mc.on("swipeleft swiperight", function (ev) {
-                    if (ev === "swipeleft") {
-                        loadImage("previous")
-                    } else if (ev === "swiperight") {
-                        loadImage();
-                    };
-                });
 
             };
         };
