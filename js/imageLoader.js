@@ -152,10 +152,8 @@
                     };
 
                 });
-                // listen for swipe events (for touch screens)
-
-                let swipeElement = modal.querySelector(".gallery-image");
-                var mc = new Hammer(swipeElement);
+                // listen for swipe events within modal (for touch screens)
+                var mc = new Hammer(modal);
 
                 // listen to events...
                 mc.on("swipeleft swiperight", function (ev) {
