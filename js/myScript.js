@@ -43,7 +43,7 @@ function runAnimations() {
   let options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.1, //30% of the element has to enter viewport to trigger callbackFunction
+    threshold: 0.0, // even one pixel of the element has to enter viewport to trigger callbackFunction
   };
 
   let observer = new IntersectionObserver(callbackFunc, options);
@@ -153,8 +153,8 @@ function storeIdAndRedirect(id) {
   // store id
   localStorage.setItem("scrollElementID", id);
   // redirect to index.html - had to put absolute path here to avoid 404 error
-   window.location.assign("https://alphaactual.github.io/Astrid-Pritisanac-website/");
-  //window.location.assign("./index.html");
+  // window.location.assign("https://alphaactual.github.io/Astrid-Pritisanac-website/");
+  window.location.assign("./index.html");
 
 };
 // on page load check if there is some element ID in the storage

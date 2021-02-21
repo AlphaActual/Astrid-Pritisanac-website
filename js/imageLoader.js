@@ -8,7 +8,7 @@
     const galleryName = gallery.getAttribute("data-gallery");
     const gallerySize = gallery.getAttribute("data-gallery-size")
 
-
+    // temporary object as a database - this will be replaced by a request from the real database
     let galleries = {
 
         vines: { name: "Ja sam trs", src: "./img/EXHIBITION-I-AM-THE-VINE/paintings/Vines-", carouselSrc: "./img/EXHIBITION-I-AM-THE-VINE/photos/I-am-the-vine-photo-" },
@@ -29,8 +29,8 @@
 
         for (let i = numOfImgsToLoad; i >= 1; i--) {
             let src = `${galleries[galleryName].src}${i}.jpg`
-
-            let image = `<img ${i > (numOfImgsToLoad - 6) ? `src="${src}"` : 'src=""'} data-src="${src}" data-id="${i}" id="${i}" class="img-fluid image-cont-scale fadeIn gallery-image" alt="${galleries[galleryName].name} ${i}">`;
+            // load first 6 images normally, and the rest lazy load
+            let image = `<img ${i > (numOfImgsToLoad - 6) ? `src="${src}"` : 'src=""'} data-src="${src}" data-id="${i}" id="${i}" class="img-fluid image-cont-scale  gallery-image ${i > (numOfImgsToLoad - 6) ? `` : 'fadeIn'}" alt="${galleries[galleryName].name} ${i}">`;
 
             imageHTML += `<div class="col-12 grid-item my-3 text-center">
                         ${image}
@@ -50,7 +50,7 @@
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     // take url from data-src and put it in src attribute
-                    console.log(entry.target.id);
+
                     entry.target.src = entry.target.dataset.src;
                     // stop observing the element
                     observer.unobserve(item);
@@ -62,7 +62,7 @@
 
         let options = {
             root: null,
-            rootMargin: "0px",
+            rootMargin: "300px",
             threshold: 0,
         };
 
@@ -134,7 +134,7 @@
                                         <a class="btn btn-next text-primary d-none d-lg-block align-self-center"><i class="fas fa-chevron-right top-icon fa-2x" style="pointer-events: none"></i></a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-4 col-xxl-4 mt-5 mt-md-0 d-flex justify-content-center">
+                                <div class=" d-none col-12 col-lg-4 col-xxl-4 mt-5 mt-md-0 d-flex justify-content-center">
                                     <div class="centering-div text-start font-Caveat fs-4">
                                         <p><span class="text-danger">Tehnika :</span> Ulje na platnu/lesonitu</p>
                                         <p><span class="text-danger">Dimenzije :</span> AA x BB x CC</p>
