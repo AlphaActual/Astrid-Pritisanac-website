@@ -142,16 +142,16 @@ a, button{
   
 }
 .custom-bg-3{
-  background:-webkit-linear-gradient(right, var(--danger),var(--primary)30% 70%,var(--danger));
+  background:linear-gradient(right, var(--danger),var(--primary)30% 70%,var(--danger));
 }
 .text-gradient-1{
-  background: -webkit-linear-gradient(right, var(--danger),var(--primary));
+  background: linear-gradient(right, var(--danger),var(--primary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .text-gradient-2{
-  background: -webkit-linear-gradient(right, var(--danger), yellow);
+  background: linear-gradient(right, var(--danger), yellow);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -413,6 +413,10 @@ a, button{
 
   .vines-quote .text-primary{
     color: var(--text-darker) !important;
+  }
+  
+  #blackWhite{
+    color:var(--text-darker) !important;
   }
 
 
