@@ -10653,6 +10653,15 @@ a:hover, button:hover {
   fill: #FF4040;
 }
 
+@media (prefers-color-scheme: dark) {
+  .cls-1 {
+    fill: #202020;
+  }
+
+  .cls-2 {
+    fill: #ad2424;
+  }
+}
 .cls-1, .cls-2 {
   fill-rule: evenodd;
 }

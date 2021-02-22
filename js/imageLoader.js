@@ -118,7 +118,7 @@
                 const modalHTML = `<div class="modal fade" id="myImageModal" tabindex="-1" aria-labelledby="myImageModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-fullscreen">
                   <div class="modal-content" style="position:relative;">
-                    <div class="modal-header">
+                    <div class="modal-header shadow">
                       <h5 class="modal-title font-Caveat fs-4" style="position:absolute;left:50%;transform:translate(-50%);" id="myImageModalLabel">${event.target.alt}</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -127,11 +127,11 @@
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-12 col-lg-8 col-xxl-8">
                                     <div class="wrapper d-flex">
-                                        <a class="btn btn-prev text-primary d-none d-lg-block align-self-center"><i class="fas fa-chevron-left top-icon fa-2x" style="pointer-events: none"></i></a>
+                                        <a class="btn btn-prev text-danger d-none d-lg-block align-self-center"><i class="fas fa-chevron-left top-icon fa-2x" style="pointer-events: none"></i></a>
                                         <div class="col img-div">
                                         ${imgElement.outerHTML}
                                         </div>
-                                        <a class="btn btn-next text-primary d-none d-lg-block align-self-center"><i class="fas fa-chevron-right top-icon fa-2x" style="pointer-events: none"></i></a>
+                                        <a class="btn btn-next text-danger d-none d-lg-block align-self-center"><i class="fas fa-chevron-right top-icon fa-2x" style="pointer-events: none"></i></a>
                                     </div>
                                 </div>
                                 <div class=" d-none col-12 col-lg-4 col-xxl-4 mt-5 mt-md-0 d-flex justify-content-center">

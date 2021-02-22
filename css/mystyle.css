@@ -80,6 +80,13 @@ a, button{
 .nav-item{
   margin: 0;
 }
+.heading-painting {
+  margin-top: 100px;
+}
+
+ #tour-btn:hover{
+  background-color: var(--danger);
+}
 
 
 
@@ -177,7 +184,7 @@ a, button{
 }
 
 .animateFadeIn {
-  animation: opac 1s;
+  animation: opac 2s;
   animation-fill-mode: forwards; /*The element will retain the style values that is set by the last keyframe (opacity:1) */
 }
 
@@ -284,3 +291,130 @@ a, button{
   z-index: 100;
 }
  
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  :root{
+    --primary: #0A2463;
+    --primary2: #0953ff;
+    --danger: #FF4040;
+    --darkGray: #202020;
+    --darkBlue:#202330;
+    --warning: #ffc107;
+    --text-light:#e9ecef;
+    --text-darker:#d8d8d8;
+    --danger-dark:#ad2424;
+  }
+  
+  body, .bg-white{
+    background-color: var(--darkGray) !important ;
+  }
+  body, .text-white{
+    color: var(--text-darker) !important;
+  }
+  .bg-danger{
+    background-color: var(--danger-dark) !important ;
+  }
+  nav .text-danger{
+    color: var(--warning) !important;
+  }
+  #card-canvas{
+    background-color: var(--danger-dark) !important;
+    border: none;
+  }
+  #card-hardboard{
+    background-color: var(--primary) !important;
+    border: none;
+  }
+  .navbar-light .navbar-brand{
+    color: var(--text-darker);
+  }
+  .navbar-light .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,193,7, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  .active{
+    color: var(--warning) !important;
+  }
+  
+  .text-dark,.navbar-light .navbar-nav .nav-link{
+    color: var(--text-darker);
+  }
+  .text-muted{
+    color: var(--text-darker) !important;
+  }
+  h1 .text-primary{
+    color: var(--primary2) !important;
+  }
+  #main-navbar{
+    background-color: var(--darkBlue) !important;
+  }
+  
+  img{
+    filter: brightness(85%);
+  }
+  #tour-btn{
+    background-color: var(--danger-dark);
+    border-color: var(--danger-dark);
+  }
+  
+  .btn-outline-primary{
+    background-color: var(--primary);
+    color: var(--text-darker);
+    border-color: var(--primary);
+  }
+  .btn-outline-danger{
+    background-color: var(--danger-dark);
+    color: var(--text-darker);
+    border-color: var(--danger-dark);
+  }
+  .btn-danger:hover, .btn-outline-danger:hover{
+    background-color: var(--danger-dark) !important;
+    border-color: var(--danger-dark) !important;
+  }
+  #exhibitions{
+    background-color: var(--danger-dark) !important;
+  }
+
+  .custom-bg-1{
+  background-image:url(../img/Gallery/paint-trail-dark-final.png);
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  }
+  .text-gradient-1{
+    background: -webkit-linear-gradient(right, var(--warning),var(--danger));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .overlay-bg-1{
+    background-image: linear-gradient(to bottom right, var(--primary),var(--danger-dark),var(--primary));
+  }
+
+  
+  #about .lead{
+    color: var(--warning);
+  }
+
+  #contact{
+    background-color: var(--danger-dark) !important;
+  }
+  .custom-bg-3{
+    background:-webkit-linear-gradient(right, var(--danger-dark),var(--darkBlue)30% 70%,var(--danger-dark));
+  }
+  #myImageModal .modal-header{
+    background-color: var(--danger-dark) !important;
+    border-bottom: none;
+
+  }
+  #myImageModal .modal-body, .modal-body .text-danger{
+    background-color: var(--darkGray) !important;
+    color: var(--danger-dark) !important;
+  }
+
+  .vines-quote .text-primary{
+    color: var(--text-darker) !important;
+  }
+
+
+}
+
