@@ -5,7 +5,26 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Astrid Pritišanac Atelje</title>
+  
+  <!-- Primary Meta Tags -->
+  <title>Slikarski Atelje Astrid Pritišanac</title>
+  <meta name="title" content="Slikarski Atelje Astrid Pritišanac">
+  <meta name="description" content="Dobro došli u našu online galeriju! Nadamo se da će vam poslužiti kao izvor nadahnuća i inspiracije. Za sve upite, slobodno nam se javite ili nas posjetite na našoj adresi! ">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.astridpritisanac.com/">
+  <meta property="og:title" content="Slikarski Atelje Astrid Pritišanac">
+  <meta property="og:description" content="Dobro došli u našu online galeriju! Nadamo se da će vam poslužiti kao izvor nadahnuća i inspiracije. Za sve upite, slobodno nam se javite ili nas posjetite na našoj adresi! ">
+  <meta property="og:image" content="./img/index-photos/Aterlier-1-frame-final">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.astridpritisanac.com/">
+  <meta property="twitter:title" content="Slikarski Atelje Astrid Pritišanac">
+  <meta property="twitter:description" content="Dobro došli u našu online galeriju! Nadamo se da će vam poslužiti kao izvor nadahnuća i inspiracije. Za sve upite, slobodno nam se javite ili nas posjetite na našoj adresi! ">
+  <meta property="twitter:image" content="./img/index-photos/Aterlier-1-frame-final">
+
   <link rel="icon" href="./img/LOGO/small-icon.png">
 
   <!-- font-awesome -->
@@ -22,15 +41,37 @@
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="90" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="90" tabindex="0" class="stop-scrolling">
   <!-- offset is due to navbar height being 90px -->
+
+  <!-- loading screen -->
+  <div class="container-fluid bg-white" id="loading-container">
+    <div class="row">
+      <div class="col-6 col-md-4 col-xl-2 wrapper text-center">
+        <!-- <img src="./img/LOGO/LOGO surname no shadow.svg" id="loader-image" alt="Logo" class="img-fluid fadeIn"> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="2068" height="1522" viewBox="0 0 2068 1522" class="img-fluid longFadeIn" id="loader-image" style="opacity: 0;">
+          
+          <path data-name="Color Fill 1" class="cls-10" d="M907,12c257.11-1.843,496.44,21.2,678,102,84.52,37.614,160.39,94.969,228,151q12.495,14,25,28c42.75,32.524,84.95,81.305,113,128,58.67,97.678,91.75,220.038,90,368-0.57,48.439.38,84.323-9,122-8.49,34.072-8.97,63.758-20,94-35.56,97.45-94.89,173.18-170,231-19.43,14.96-42.1,22.52-63,36-128.47,82.83-289.46,143.74-460,175q-16.995.495-34,1c-39.12,7.4-80.1,9.94-116,17-25.71,5.05-54.78-2.47-80,3h-38q-53.49-1.005-107-2c-48.655-.07-84.169-3.92-128-12l-66-6c-60.3-11.6-120.189-21.77-164-50-56.7-36.53-96.8-99.11-126-163q-9.5-30-19-60a466.95,466.95,0,0,0-52-102c-7.425-10.99-14.087-24.84-25-32q-32-23.505-64-47c-49.371-32.131-102.422-57.8-150-91-38.227-26.672-66.354-67.351-91-108C35.4,756.068,10.284,686.726,27,619l20-84c29.005-81.522,85.165-136.949,134-198C279.484,213.879,446.025,114.457,614,60c56.691-18.379,121.2-27.464,182-38ZM611,790l-30,7c-23.59,9.773-43.742,32.576-52,58-28.266,87.024,68.526,180.24,151,151,52.625-18.658,79.069-92.623,44-150-15.5-25.352-40.808-49.711-71-60Z"/>
+          <path data-name="Color Fill 7" class="cls-20" d="M421,856h3l-2,3h-1v-3Zm-8,13h3l-2,3h-1v-3Zm-187,2h3v3C227.1,872.627,227.364,873.027,226,871Zm157,30h3v2l-3,1v-3Zm-17,11h3v2l-3,1v-3Zm-73,7,5,1v2C294.109,921,295,921.612,293,919Zm6,2h3v3C300.1,922.627,300.364,923.027,299,921Zm1328,67c58.78-.594,116.53,20.85,133,60,9.38,22.29,11.83,43.38,23,62,15.78,26.3,45.71,76.28,10,103-16.63,12.44-50.73,21.14-80,14l-23-6c-17.62,3.66-34.08,18.33-64,13-54.34-9.69-136.13-75.62-110-151,6.52-18.8,20.61-35.86,38-44q7.995-2.505,16-5l15-24C1595.2,997.308,1611.67,995.943,1627,988Z"/>
+          <path data-name="Color Fill 6" class="cls-30" d="M1285,1062c31.67,2.29,60.74,22.23,75,43q4.005,9,8,18,11.505,5.505,23,11c11.55,6.31,26.53,17.47,34,28,8.35,11.76,13,25.87,15,44,0.82,7.45-2.25,11.35,0,17l24,21q3.495,9,7,18c11.03,28.41-25.54,44.58-36,53-28.84,23.22-141.84,40.34-206,12-27.04-11.94-72.45-38.98-38-76q-4.005-12.495-8-25,0.495-16.005,1-32-7.005-15-14-30c-12.61-43.53,24.81-77.57,49-90q18-5.505,36-11Q1270,1062.505,1285,1062Z"/>
+          <path data-name="Color Fill 5" class="cls-40" d="M1003,65c1.86,2.573.08,1.584-2,3C1001.67,67,1002.33,66,1003,65ZM901,67l2,3Zm8,25,2,2-1,1ZM720,98h2l-3,2Zm280,4h0Zm518,47v6c-0.67-1-1.33-2-2-3C1516.67,151,1517.33,150,1518,149Zm-801,1q0.5,1,1,2Q717.5,151,717,150Zm761,18c3.58,1.782,1.18-.531,3,3h-3v-3Zm-136,2c0.33,1,.67,2,1,3h-1v-3Zm-769,8,3,2h-3v-2Zm1018,4h0Zm-959,7c1.923,1.392.6,0.1,2,2Zm187,11q0.5,1.5,1,3h-1v-3Zm-90,1,2,3C728.958,202.2,730.293,203.985,729,201Zm591,13c3.02,1.259,1.2-.018,3,2ZM796,283h3v1l-3,1v-2Zm-244,2,3,2v1h-1Zm256,51,2,3ZM394,354l3,2v1h-1Zm1441,0c2.7,1.6,1.38.339,3,3ZM827,403c2.042,1.8.707,0.015,2,3Zm6,20,2,3Zm-553,3c3.881,1.713,5.246,3.161,7,7Zm884,37c0.33,1,.67,2,1,3h-1v-3Zm655,55c2.7,1.6,1.38.339,3,3Zm-389,9h0Zm105,3c1.67,0.333,3.33.667,5,1v1C1535.99,531.421,1537.01,532.046,1535,530Zm-16,3c0.67,0.667,1.33,1.333,2,2h-3C1518.33,534.333,1518.67,533.667,1519,533Zm-321,5c0.33,0.667.67,1.333,1,2h-2C1197.33,539.333,1197.67,538.667,1198,538ZM919,642c3.023,1.259,1.2-.018,3,2h-1ZM406,657l1,2Zm1,2,1,2Zm1,2,2,4-2-1v-3Zm2,7,2,3C409.958,669.2,411.293,670.985,410,668Zm1,4,2,3Zm1,4,2,3C411.958,677.2,413.293,678.985,412,676Zm2,44,1,2Zm0,6,1,2Zm5,7,1,2Zm8,12,1,2Zm-235,5,1,3h-1v-3Zm239,1,2,4-2-1v-3Zm3,6,1,3h-1v-3Zm0,4,1,2Zm1,2,1,3h-1v-3Zm1,4,1,2Zm2,11,1,2Zm1,11,1,2Zm0,9v0Zm-252,5v0Zm251,8,1,3h-1v-3Zm-250,1,1,3h-1v-3Zm1,5,1,3h-1v-3Zm249,3c-0.22,1.467.414,1-1,3Zm-3,6,1,2Zm-1,4c1.308,2.72.442,1.923-1,4Zm-241,1,1,3h-1v-3Zm9,18q0.5,1,1,2Q202.5,850,202,849Zm1,2q0.5,1,1,2Q203.5,852,203,851Zm34,27h0Zm50,40h0Zm10,4h0Zm13,3h0Zm308,98c13.167,0.96,16.333,2.92,27,6q9.5-.495,19-1c11.9,4.4,23.951,15.86,37,21,33.782,13.3,79.562,13.96,91,49,11.479,35.16-15.907,68.43-34,82q-16.5,10.005-33,20l-13,30c-17.8,25.08-62.138,56.34-110,49-47.926-7.35-115.689-37.28-104-99,2.143-11.31,10.163-20.63,13-29q-2.5-11.505-5-23c-3.107-16.07,1.9-33.28,8-43,14.864-23.68,40.6-45.37,69-55Q600.5,1026.505,618,1023Zm1143,30c0.33,0.67.67,1.33,1,2C1761.67,1054.33,1761.33,1053.67,1761,1053Zm1,4c0.33,0.67.67,1.33,1,2C1762.67,1058.33,1762.33,1057.67,1762,1057Zm1,4c0.33,0.67.67,1.33,1,2C1763.67,1062.33,1763.33,1061.67,1763,1061Zm-523,3h2c-1,.67-2,1.33-3,2C1239.33,1065.33,1239.67,1064.67,1240,1064Zm-10,3h3l-2,2C1230.67,1068.33,1230.33,1067.67,1230,1067Zm-16,7h3l-2,2C1214.67,1075.33,1214.33,1074.67,1214,1074Zm-7,5h0Zm-2,1h2c-1,.67-2,1.33-3,2C1204.33,1081.33,1204.67,1080.67,1205,1080Zm-3,2h2c-1,.67-2,1.33-3,2C1201.33,1083.33,1201.67,1082.67,1202,1082Zm-3,2h2c-1,.67-2,1.33-3,2C1198.33,1085.33,1198.67,1084.67,1199,1084Zm-3,3c0.33,0.67.67,1.33,1,2h-2C1195.33,1088.33,1195.67,1087.67,1196,1087Zm575,0c0.33,0.67.67,1.33,1,2C1771.67,1088.33,1771.33,1087.67,1771,1087Zm-589,15c-0.22,1.47.41,1-1,3C1181.33,1104,1181.67,1103,1182,1102Zm205,30h0Zm7,4c1.92,1.39.6,0.1,2,2Zm411,16c0.33,0.67.67,1.33,1,2C1805.67,1153.33,1805.33,1152.67,1805,1152Zm-384,5,2,2C1421.08,1157.61,1422.4,1158.9,1421,1157Zm387,4c0.33,0.67.67,1.33,1,2C1808.67,1162.33,1808.33,1161.67,1808,1161Zm2,14c0.33,1,.67,2,1,3h-1v-3Zm0,7c0.33,0.67.67,1.33,1,2C1810.67,1183.33,1810.33,1182.67,1810,1182Zm-364,46h0Zm288,0c1.67,0.33,3.33.67,5,1C1737.33,1228.67,1735.67,1228.33,1734,1228Zm9,0h0Zm-117,5h0Zm-427,80c1,0.67,2,1.33,3,2C1201,1314.33,1200,1313.67,1199,1313Zm36,18h0Zm13,4h0Zm101,6c1.92,1.39.6,0.1,2,2Zm75,69h2c-1,.67-2,1.33-3,2C1423.33,1411.33,1423.67,1410.67,1424,1410Z"/>
+          <path data-name="Color Fill 4" class="cls-50" d="M349,617c39.015-.4,69.167,39.707,65,71v40c12.752,20.112,20.364,32.4,26,63,10.925,59.316-64.085,146.472-127,135-22.691-4.138-41.634-13.517-53-29l-8-14-21-7c-12.325-6.113-23.988-17.482-31-29-26.611-43.714-8.1-116.533,18-146,11.138-12.576,31.443-16.827,46-26l42-36C319.424,629.376,333.231,625.279,349,617Z"/>
+          <path data-name="Color Fill 2" class="cls-60" d="M1025,69c14.13-.477,39.96-6.113,51,0-0.67,1-1.33,2-2,3-15.95,3.461-32.9,15.527-40,28q9,12,18,24c10.62,15.523,13.99,35.216,24,52,3.47,5.81,10.17,7.887,13,14-0.33.667-.67,1.333-1,2l-54,1v-1c6.76-29.2-11.3-45.087-23-63-5.59.3-5.84,1.019-9,3-2.433,12.367-4.513,47.055,2,56,2.58,3.544,4.98,1.579,7,7l-55,1v-2c9.349-10.686,9.622-89.615,3-109-2.024-5.925-7.029-5.054-9-12l54-4c0.33,0.667.67,1.333,1,2-3.36,8.252-12.87,30.227-4,42,9.76-7.162,25.61-21.156,28-35C1026.49,73,1025.55,75.316,1025,69Zm70,127c1.58-7.794,7.09-8.489,9-16,6.16-24.223,8.95-91.894-1-107,0.33-1,.67-2,1-3h1l52,3q-4.005,7.5-8,15-3,43.5-6,87c-2.1,12.541,6.45,17.356,5,23ZM828,214l-10-49h3c5.8,31.644,69.239,47.916,73,10-15.146-21.348-59.939-13.9-74-33a38.523,38.523,0,0,1-6-30c8.965-37.362,49.772-28.474,87-37q4.5,17.5,9,35h-3c-14.882-9.274-30.719-25.192-53-11-6.571,32.529,62.461,17.764,75,49C952.6,206.786,870.942,210.22,828,214ZM1288,89l51,10c0.33,0.667.67,1.333,1,2-13.24,34.7,3.97,100.018,15,129h-9l-51-11c0.33-1.667.67-3.333,1-5,2.67-1,5.33-2,8-3,4.51-23.025-3.78-34.431-24-42l-11-3c-9.1,3.9-15.38,24.022-19,34,2.93,3.765,6.18,7.1,6,11-8.83-2.224-34.04-3.506-38-11v-1c24.62-5.76,56.75-76.876,70-95V89ZM751,101c49.665-1.493,13.728,39.294,12,55,6.661,3.4,53.507,51.679,57,58-14.6,4.229-38.887,15.882-55,12v-1c6.286-22.254-17.622-39.993-34-49l-8,5c1.932,15.509,3.886,42.654,20,48v5c-12.207,2.276-42.239,16.266-52,10,5.152-21.533-14.52-108.9-31-114v-5Zm735,40q-1.005,20-2,40h-1c-0.67-.333-1.33-0.667-2-1-2.25-16.147-11.38-30.893-30-31-9.15,30.992-35.76,74.517-24,107-12.79-1.911-51-10.2-58-19,0.33-.667.67-1.333,1-2,18.49-4.934,38.02-69.949,43-98a15.22,15.22,0,0,1-5-5c-20.09-.771-26.08,6.054-38,15l-3-2v-1q9-16.5,18-33C1417.77,116.72,1453.36,138.5,1486,141ZM731,120c-7.979,2.753-15,.284-19,7-4.477,10.4,2.525,26.31,5,35l5,1c12.224-9.265,23.389-16.658,18-38Zm563,1q-9,15-18,30c0.33,1,.67,2,1,3a46.156,46.156,0,0,1,21,12l3-2c0.36-16.317.09-34.183-4-43h-3ZM596,147h5q0.5,2,1,4c-3.462,13.919,52.085,77.186,63,88,5.124,5.077,14.468,4.14,17,12-15.969,5.052-41.54,22.876-59,19v-1c3.8-4,5.8-9.38,3-15-6.627-16.826-33.158-18.6-53-13-2.09,13.643-2.779,29.79,3,39,4.616,0.745,7.552,1.089,10,4q-0.5,1-1,2c-9.7,3.736-24.167,13.617-36,8,5.655-9.136,13.282-99.956,7-119-1.517-4.6-6.055-4.492-8-10Zm1011,49q-2.505,18.5-5,37h-3v-4c-9.6-17.187-14.06-34.4-39-36-7.9,4.154-13.17,11.969-14,23,13.94,5.808,17.81,4.484,31,0,0.33,0.333.67,0.667,1,1q-4.995,20.5-10,41l-3-2c-0.19-16.327-7.38-27-25-28-9.16,9.211-23.25,37.606-21,53,16.85,23.1,52.45,8.3,69-4h3c0.33,0.667.67,1.333,1,2q-16.005,18.5-32,37l-93-42c1.67-7.625,8.29-5.908,12-11,7.07-9.718,45.67-88.736,39-102C1552.19,162.762,1571.27,194.579,1607,196ZM573,188q-0.5,18.5-1,37c8.295-1.307,18.957-2.759,28-1C597.613,212.279,582.443,193.025,573,188ZM505,326c-0.6-24.945-34.132-36.619-53-44l-3,4c-1.6,1.984-1.3,1.389-2,5l23,41c3.576,4.164,11.323,3.723,15,8l-1,2c-13.687,5.6-33.59,26.815-49,24v-1c6.587-9.428-2.246-23.19-7-31-11.148-18.317-32.911-67.981-55-72,2.911-11.132,36.365-27.454,48-30-0.917,19.514,6.042,28.267,15,40l2-1c3.949-13.485,9.586-24.95,10-42l-10-4,2-5,43-22,1,2c-7.614,14.959-20.174,24.913-23,46,31.561,7,48.875,27.94,71,44,5.73,4.159,18.326,3.715,21,11C540.682,309.822,523.535,325.221,505,326Zm1155-98q22.5,15,45,30c-18.47,14.512-64.56,63.281-65,92,25.3,19.941,36.34,8.8,63,1,0.67,0.333,1.33.667,2,1v1c-7.01,11.632-24.04,22.144-35,30h-6c-5.28-10.921-61.39-45.6-75-53v-3C1609.52,324.572,1659.72,249.675,1660,228ZM342,282c-0.227,19.656,51.745,88.775,65,95l10,1v6l-40,31h-4c1.366-18.083-50.507-88.121-63-96l-13-3v-3C309.238,303.942,325.2,284.381,342,282Zm314,8,120,5c14.053,1.889,34.58-5.087,43,3,2.058,4.367.668,10.773-1,14-25.245,9.959-.232,71.567,6,93q24,79.992,48,160c8.329,26.5,12.59,58.082,28,78,5.194,6.714,16.044,8.056,23,13,0.3,5.117.39,9.611-2,12l-183-7q-0.5-4-1-8c6.483-13.031,24.2-10.477,29-27,18.211-62.708-72.255-107.271-125-108-12.95,26.083-41.716,76.74-34,113,5.1,7.412,11.468,11.907,24,12v15l-121-5c0.236-2.825-1.854-11.1,2-15,10.616-5.735,22.779-7.6,31-18,19.048-24.1,28.374-56.544,41-87l58-137c5.94-13.8,31.354-65.426,26-80l-12-13V290Zm1148,49c13.87,5.159,33.47,25.509,42,37q-7.005,2.5-14,5c-24.64,17.108-37.91,55.354-67,67-30.92,12.377-78.09-38.753-71-65,7.57-2.737,32.83-16.816,37-8-11.02,4.858-19.49,19.738-16,36,3.53,3.763,5.72,6.815,11,9C1747.03,425.994,1805.58,357.59,1804,339ZM700,374c-13.411,28.1-38.7,72.855-43,105l52,14c8.462,4.172,15.795,11.9,26,14v-9C728.267,477.765,709.746,381.62,700,374Zm-468,2c3.765,4.157,1.164,10.243,4,16,6.12,12.422,62.158,66.74,78,64,15.223-10.011,21.907-33.751,13-56v-1h5c2.539,6.918,21.976,35.072,20,41-1.51,4.529-64.236,63.33-70,65l-1-1c1.141-22.813-65.863-82.622-88-86C200.512,402.111,219.623,387.829,232,376Zm1646,40c7.98,3.054,55.42,71.364,56,83l-21,23h-1c-1.54-27.593,7.97-38.165-13-58-11.9.258-16.8,6.1-24,11v1c3.75,7.115,5.6,13.555,13,17,4.96,1.306,8.85-.034,14-1v3l-27,29h-4v-3c6.46-14.116,2.73-29.089-8-37-10.39,3.08-48.25,27.614-45,39,3.38,26.558,36.41,29.738,62,29,0.33,1,.67,2,1,3l-3,3c-16.22,2.818-30.07,11.138-47,10-9.62-28.167-49.37-56.662-53-85C1798.68,485.8,1872.34,433,1878,416ZM151,466l35,16c-1.321,3.827,0,2.08-3,4-16.773,5.71-54.919,8.228-43,36,13.652,22.79,52.743-41.76,85-31,12.752,4.253,21.26,14.276,26,27,17.64,47.357-30.835,62.874-37,96l-47-22v-4c32.238,4.331,71.695-5.717,64-44l-7-6c-25.027-11.509-45.225,41.788-80,34-9.346-2.093-16.989-8.257-22-15C95.052,520.735,141.278,491.473,151,466Zm1257,5c19.36,1.46,30.64,13.261,30,35-8.92,20.059-43.92,27.287-55,4C1372.42,487.779,1392.63,477.993,1408,471Zm-244,1c0.17,14.605-5.15,43.742,1,57,14.45,0.144,27.05.252,39-2v5c-2.11,5.923-3.71,14.086-8,18-6.14-1.975-26.94-4.853-32,0-7.77,16.538-5.85,81.554,0,102,4.77,2.62,6.54,4.534,14,5,15.26-5.389,17.89-13.507,28-23l6,2c-4.76,14.443-11.07,29.239-19,41l-35,5c-58.07,7.969-58.97-56.789-51-109,1.07-7.012,2.73-22.561-1-28h-14c0.33-1,.67-2,1-3v-6c18.96-3.218,23.77-25.587,23-49Zm466,9,10,1q-1.995,98.49-4,197c3.76,5.1,7.62,7.4,14,10-0.33,2.333-.67,4.667-1,7-78.88-5.962-166.15,9.392-182-61-2.96-13.136-3.02-33.378,2-45,9.91-22.925,29.98-41.293,60-48,11.99-2.678,46.48,4.564,53-4,3.34-6.589,4.88-28.132,1-37-2.92-6.662-7.87-2.487-9-13Zm-568,82h-6c-7.42-11.74-51.23-49.844-66-18q-0.5,3-1,6c16.13,28.651,68.77,17.679,82,52,5.07,13.161,1.18,32.2-4,41-31.09,52.827-85.464,18.7-138,27q-0.5-29.5-1-59h1l6,3c3.9,37.19,56.143,50.947,83,26-0.33-3.666-.67-7.334-1-11-12.75-24.8-67.78-16.33-81-48-4.806-11.513-2.774-26.869,2-36,21.775-41.643,75.2-22.465,121-27Q1060.5,541,1062,563Zm247,119-84-2v-6c5.22-2.864,10.61-5.4,13-11,5.82-13.666,6.28-97.882,3-114-3.41-5.009-6.2-7.215-13-9v-7l62-2q3.495,12,7,24c19.76-10.549,28.82-30.23,60-23v7q-5.505,16-11,32c-46.45-23.327-45.48,10.783-51,50-1.63,11.558-3.29,33.968,1,44,2.48,5.788,9.06,7.631,13,12v5Zm52,3v-7c4.12-1.273,8.86-3.6,11-7,4.53-7.557,11.46-102.644,5-115q-4.995-3.5-10-7c0.33-2,.67-4,1-6,20.45-2.7,44.28-7.57,65-5,5.05,29.206-11.79,110.384-1,132q6.495,6,13,12c0.33,1.667.67,3.333,1,5-0.33.333-.67,0.667-1,1Zm202-122c-21.14,10.266-31.84,16.888-37,43-7.67,38.859,16.72,83.01,51,59,6.82-26.521,10.72-69.143,5-100ZM805,704l277,2,120,2,214,5,166,2c23.22,0,56.92-5.294,74,4v1c-0.33,1.667-.67,3.333-1,5-29.34,1.957-70.37.981-102,6l-104,1-137,1-130,1-172,1-156,4c-53.558,8.344-125.736,5.312-175-3-16.06-2.71-30.1,1.047-42-1V717l90-12ZM634,716h0Zm427,63,16,2c8.19,10.237,7.92,19.57,0,30-7.37,2.389-13.82,3.179-22,1l-6-8C1042.04,791.448,1053.17,783.5,1061,779Zm172,0,16,2c8.19,10.237,7.92,19.57,0,30-7.37,2.389-13.82,3.179-22,1l-6-8C1214.04,791.448,1225.17,783.5,1233,779Zm66,2h11l24,26c1.67-1.333,3.33-2.667,5-4l21-22h10q-11.505,22-23,44h-25Q1310.495,803,1299,781Zm-510,4c39.289-.787,132.4-5.55,143,12,17.963,29.73-31.133,63.132-49,70l-34,6c-5.67,12.7-7.87,49.045-3,61,2.332,5.725,7.624,3.013,9,11q-0.5,1-1,2l-67-2v-4c7.867-10.848,17.927-116.888,9-142-2.189-6.159-7.589-4.079-9-13Zm71,15-7,2c-6.573,9.161-11.813,35.6-5,50,23.955-.358,43.276-19.446,37-44C877.579,802.565,870.138,800.969,860,800Zm299,40h33v13h-33c-0.49,17.854-5.14,73.383,5,80,6.45,4.205,20.78,1.6,29,1,0.33,2.333.67,4.667,1,7l-21,8c-71.67,17.215-38.09-54.837-48-97-5.92-.59-12.38-1.841-15-6-0.33-1.333-.67-2.667-1-4h2l18-3q4.995-13.5,10-27l20-3v31ZM929,947q-0.5-3-1-6l18-6V853l-17-4q-0.5-2.5-1-5l51-9,1,1v12c12.233-6.445,24.11-11.811,43-12q-3.5,20-7,40l-7,1c-2.03-17.279-10.679-27.227-29-20-0.24,12.879-2.169,75.342,3,79,4.939,2.563,12.869,2.445,16,7q0.5,2,1,4H929Zm151-112h4v99c0.67,1,1.33,2,2,3,8.11,0.718,14.55,1.974,16,10h-69c-0.33-2-.67-4-1-6l18-6V853q-8.505-2-17-4c-0.33-1.667-.67-3.333-1-5Zm172,0h4v99c0.67,1,1.33,2,2,3,8.11,0.718,14.55,1.974,16,10h-69c-0.33-2-.67-4-1-6l18-6V853q-8.505-2-17-4c-0.33-1.667-.67-3.333-1-5Zm347,112c0.33-2.333.67-4.667,1-7,6.14-.4,10.55-1.771,13-6q0.495-17,1-34c0-40.1-3.6-56.167-42-43v79l15,5v6h-66c-0.33-2-.67-4-1-6l18-5V853q-8.505-2-17-4c-0.33-1.667-.67-3.333-1-5l51-9c0.33,0.333.67,0.667,1,1q0.495,6,1,12,10.005-5,20-10c10.2-3.045,24.39-2.219,33,1,40.35,15.078,7.61,62.392,23,98,8.11,0.718,14.55,1.974,16,10h-66ZM1327,836c18.61-.436,34.33.888,47,6l-6,29h-7q-4.005-11.5-8-23c-15.16-1.15-31.68-2.51-37,9-1.95,3.747-1.99,7.71,1,11,14.84,19.786,54.7,10.371,61,40,9.06,42.584-65.88,55.409-91,33,3.41-7.3,2.69-24.4,9-29l4-1q4.005,12.5,8,25c11.17,4.649,32.57,4.827,38-5,2.31-2.557,2.71-4.054,3-9-8.94-18.145-34.71-16.421-50-28-15.89-12.034-12.3-40.128,3-50Zm134,48c0.47-13.247-1.37-20.586-6-28-17.57-6.29-44.29,2.468-51-8v-1q12.495-4.5,25-9c14.94-3.618,35.91-2.646,47,3,36.13,18.4,3,65.23,21,96,4.15,0.664,10.52,1.442,13,4,0.33,1.333.67,2.667,1,4-18.4,3.573-39.66,10.483-49-7-21.21,14.258-62.97,18.872-69-14C1386.57,888.939,1430.19,883.041,1461,884Zm281,0c0.47-13.247-1.37-20.586-6-28-17.57-6.29-44.29,2.468-51-8v-1q12.495-4.5,25-9c14.94-3.618,35.91-2.646,47,3,36.13,18.4,3,65.23,21,96,4.15,0.664,10.52,1.442,13,4,0.33,1.333.67,2.667,1,4-18.4,3.573-39.66,10.483-49-7-21.21,14.258-62.97,18.872-69-14C1667.57,888.939,1711.19,883.041,1742,884Zm117-48c17.93-.376,30.19,2.42,43,6,0.33,0.667.67,1.333,1,2q-4.005,16.5-8,33l-6,1-9-29c-32.52-5.111-48.68,31.863-36,63,8.49,20.847,31.81,23.47,59,20,0.33,2.333.67,4.667,1,7-50.1,25.53-124.68-3.456-94-70C1819.67,848.016,1836.68,845.005,1859,836Zm-398,59c-12.19-.5-25.74,1.306-30,9-5.28,5.064-5.23,17.93,0,23,5.66,9.046,18.87,7.059,29,4Q1460.5,913,1461,895Zm281,0c-12.19-.5-25.74,1.306-30,9-5.28,5.064-5.23,17.93,0,23,5.66,9.046,18.87,7.059,29,4Q1741.5,913,1742,895Z"/>
+          <path data-name="Color Fill 3" class="cls-70" d="M523,697l26,5c24.166,5.306,46.712-6.676,69,0,7.824,2.344,16.23,10.3,19,11,0.986,13.11,1.51,18.589-4,26-35.63,13.989-65.73,15.655-86-15C540.082,713.538,526.758,712.109,523,697Zm432,376c40.688-.24,63.43,26.13,77,53l9,24,21,12q13.005,13.995,26,28c40.63,63.73,7.98,168.22-51,187-34.58,11.01-52.27-8.09-72-14H929c-19.936-4.19-38.913-18.57-49-33-16.094-23.02-37.614-74.94-24-118,7.306-23.11,28.353-37.12,38-59C910.259,1116.12,918.213,1089.93,955,1073Z"/>
+        </svg>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- end of loading screen -->
 
   <!-- navbar -->
   <nav class="navbar navbar-light bg-white fixed-top navbar-expand-lg shadow-md py-2 py-lg-0 font-Caveat"
     id="main-navbar">
     <div class="container-fluid">
       <!-- company name -->
-      <a href="#" class="navbar-brand ms-3 fs-3">Astrid Pritišanac Atelje</a>
+      <a href="#banner" class="navbar-brand my-nav-link ms-3 fs-3">Astrid Pritišanac Atelje</a>
 
       <!-- toggle button -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks"
@@ -44,7 +85,7 @@
         <div class="navbar-nav text-center" id="navbar-content">
           <div class="centering-div d-lg-flex mt-5 mt-lg-0 fs-4">
 
-            <a href="#banner" class="nav nav-link my-nav-link  d-block m-3 mt-5 mt-lg-3">Početna</a>
+            <a href="#banner" class="nav nav-link my-nav-link d-block m-3 mt-5 mt-lg-3">Početna</a>
 
             <a href="#exhibitions" class="nav nav-link my-nav-link m-3 d-block text-nowrap">Izložbe</a>
 
@@ -90,24 +131,29 @@
     <!-- banner -->
     <div id="banner">
       <div class="container-fluid">
-        <div class="row height-100 align-items-center justify-content-center">
-          <div class="col text-center heading-painting px-5 ">
+        <div class="row height-100">
+          <div class="col text-center heading-painting px-sm-5">
 
             <!-- painting -->
-            <!-- on small screen -->
-            <img src="./img/index-photos/Life-small.jpg" alt="Life painting" class="img-fluid d-sm-none p-2">
-            <!-- on medium screen -->
-            <img src="./img/index-photos/Life-md.jpg" alt="Life painting"
-              class="img-fluid d-none d-sm-inline d-lg-none p-2 p-md-5">
+            <picture>
+              <!-- on extra large screen -->
+              <source media="(min-aspect-ratio: 8/5)" srcset="./img/index-photos/Life-xl.jpg">
+              <!-- on large screen -->
+              <source media="(min-aspect-ratio: 6/5)" srcset="./img/index-photos/Life-lg.jpg">
 
-            <img src="./img/index-photos/Life-lg.jpg" alt="Life painting"
-              class="img-fluid d-none d-lg-inline d-xl-none p-5">
-            <!-- on large screen -->
-            <img src="./img/index-photos/Life-sharp-trimmed.jpg" alt="Life painting"
-              class="img-fluid xxl-image d-none d-xl-inline img-shadow">
+              <!-- on medium screen -->
+              <source media="(min-aspect-ratio: 4/5" srcset="./img/index-photos/Life-md.jpg">
 
-            <a href="#welcome-section" class="nav-link my-nav-link text-danger mt-xl-4 fadeIn d-inline-block"><i
+              <!-- on small screen -->
+              <img src="./img/index-photos/Life-sm.jpg" alt="Ulje na platnu - Život" class=" mb-4 img-fluid  img-shadow" style="max-height: 70% !important">
+    
+        
+            </picture>  
+            <div>
+              <a href="#welcome-section" class="nav-link my-nav-link text-danger mt-xl-4 fadeIn d-inline-block"><i
                 class="fas fa-chevron-circle-down fa-3x"></i></a>
+            </div>
+            
 
           </div>
         </div>
@@ -132,14 +178,12 @@
 
             <!-- image col -->
             <div class="col-md-10 col-lg-9 col-xxl-6 p-4">
-              <img src="./img/index-photos/Aterlier-1-frame-whites.jpg" alt="Atelje Astrid Pritišanac"
+              <img src="./img/index-photos/Aterlier-1-frame-final.jpg" alt="Atelje Astrid Pritišanac"
                 class="img-fluid img-shadow bg-warning ">
             </div>
             <!-- text column -->
             <div class="col col-lg-8 col-xxl-6 p-4 p-md-5 mb-5 mt-xxl-0 text-center">
               <!-- logo image -->
-              <!-- <img src="./img/LOGO/LOGO surname shadow.png" alt="Atelje Astrid Pritišanac" class="img-fluid"
-                style="width: 10rem;"> -->
 
               <!--welcome text paragraphs -->
               <div class="welcome-text text-start  mt-4">
@@ -217,7 +261,7 @@
           <div class="row row-cols-1 row-cols-lg-2 justify-content-center mb-5 mt-xl-5">
             <div class="col img">
               <div class="image-cont position-relative">
-                <img src="./img/exhibition-galleries/Vines-cover.jpg" alt="Vines gallery"
+                <img src="./img/exhibition-galleries/Vines-cover.jpg" alt="Galerija Ja sam trs"
                   class="img-fluid d-block img-shadow">
                 <a href="./Vines.html">
                   <div class="overlay overlay-bg-1">
@@ -258,7 +302,7 @@
 
             <div class="col img order-1 order-lg-2">
               <div class="image-cont position-relative">
-                <img src="./img/exhibition-galleries/Lilies-cover-bronze.jpg" alt="Vines gallery"
+                <img src="./img/exhibition-galleries/Lilies-cover-bronze.jpg" alt="Galerija Ljiljani"
                   class="img-fluid img-shadow d-block">
                 <a href="./Lilies.html">
                   <div class="overlay overlay-bg-1">
@@ -277,7 +321,7 @@
           <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
             <div class="col img">
               <div class="image-cont position-relative">
-                <img src="./img/exhibition-galleries/Water-Lilies-cover.jpg" alt="Vines gallery"
+                <img src="./img/exhibition-galleries/Water-Lilies-cover.jpg" alt="Galerija Lopoči"
                   class="img-fluid img-shadow d-block">
                 <a href="./Water-Lilies.html">
                   <div class="overlay overlay-bg-1">
@@ -337,7 +381,7 @@
           <div class="row row-cols-1 row-cols-lg-2 justify-content-center my-5">
             <div class="col-10 img p-4">
               <div class="about-photo position-relative">
-                <img src="./img/about/Astrid.jpg" alt="Astrid Pritišanac" class="img-fluid d-block rounded-circle">
+                <img src="./img/about/Astrid.jpg" alt="Astrid Pritišanac fotografija" class="img-fluid d-block rounded-circle">
               </div>
             </div>
             <div class="col text p-lg-4 mt-2 mt-lg-0 d-flex fadeIn">
@@ -379,7 +423,7 @@
 
             <div class="col-10 img p-4 order-1 order-lg-2">
               <div class="about-photo position-relative">
-                <img src="./img/about/Branko.jpg" alt="Branko Pritišanac" class="img-fluid d-block rounded-circle">
+                <img src="./img/about/Branko.jpg" alt="Branko Pritišanac fotografija" class="img-fluid d-block rounded-circle">
               </div>
 
             </div>
@@ -411,10 +455,10 @@
                     </ol> -->
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="./img/about/Oil-canvas-example.jpg" class="d-block w-100" alt="Hardboard-example">
+                      <img src="./img/about/Oil-canvas-example.jpg" class="d-block w-100" alt="Ulje na platnu primjer">
                     </div>
                     <div class="carousel-item">
-                      <img src="./img/about/Canvas-stack-white.jpg" class="d-block w-100" alt="Hardboard-example">
+                      <img src="./img/about/Canvas-stack-white.jpg" class="d-block w-100" alt="Ulje na platnu primjer">
                     </div>
 
                   </div>
@@ -428,13 +472,16 @@
                   </a>
                 </div>
                 <!-- end of carousel -->
-                <div class="card-body text-white p-5">
+                <div class="card-body text-white py-5 px-4">
                   <ul>
                     <li class="card-text">Jedna od najpoznatijih slikarskih tehnika ujedno je i primarna tehnika u kojoj
                       radimo</li> <br>
-                    <li class="card-text">Glavni alat je slikarska špahkla</li><br>
-                    <li class="card-text">Raspon dimenzija s kojima najčešće radimo je: AA x BB x CC - DD x EE x FF</li>
+                    <li class="card-text">Glavni alat je slikarska špahkla, a podloga slikarsko platno</li><br>
+                    <li class="card-text">Radimo u mnogo različitih standardnih dimenzija</li><br>
+                    <li class="card-text">Prednost u odnosu na lesonit - <span class="text-warning"> uramljivanje nije nužno </span>, slika odlično izgleda i bez rame</li><br>
+                    <li><a href="https://hr.wikipedia.org/wiki/Uljene_boje" class="text-white btn btn-primary buttonShadow" target="_blank" rel="noopener noreferrer">Više o uljanim bojama</a></li>
                   </ul>
+                  
                 </div>
               </div>
             </div>
@@ -454,10 +501,10 @@
                     </ol> -->
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="./img/about/Hardboard-example.jpg" class="d-block w-100" alt="Hardboard-example">
+                      <img src="./img/about/Hardboard-example.jpg" class="d-block w-100" alt="Ulje na lesonitu primjer">
                     </div>
                     <div class="carousel-item">
-                      <img src="./img/about/hardboard-white-side.jpg" class="d-block w-100" alt="Hardboard-example">
+                      <img src="./img/about/hardboard-white-side.jpg" class="d-block w-100" alt="Ulje na lesonitu primjer">
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#carouselIndicators-2" role="button" data-bs-slide="prev">
@@ -470,15 +517,16 @@
                   </a>
                 </div>
                 <!-- end of carousel -->
-                <div class="card-body p-5">
+                <div class="card-body py-5 px-4">
                   <ul>
                     <li class="card-text">Tehnika je ista kao kod slikarskog platna, no ovdje je podloga slikarski
                       lesonit.
                     </li> <br>
                     <li class="card-text">Prednosti su mu manja debljina i cijena u odnosu na platno, no kvaliteta slike
-                      je
-                      i dalje vrhunska.</li> <br>
-                    <li class="card-text">Raspon dimenzija s kojima najčešće radimo je: AA x BB x CC - DD x EE x FF</li>
+                      i dalje ostaje vrhunska.</li> <br>
+                    <li class="card-text">Odličan je materijal za slikanje - dugotrajan je i s vremenom se ne iskrivljuje, ne rasušuje i ne reagira na vlažnost</li> <br>
+                    <li class="card-text">Lako se uramljuje i nije potreban dodatni <a href="https://hr.wikipedia.org/wiki/Paspartu" class="text-white" target="_blank" rel="noopener noreferrer">paspartu</a></li> <br>
+                    <li class="card-text">Radimo sve od najmanjih do najvećih dimenzija</li>
                   </ul>
                 </div>
               </div>
@@ -694,7 +742,7 @@
 
   <!-- Contact section -->
   <section id="contact" class="pb-5 bg-danger">
-    <div class="container">
+    <div class="container-fluid">
       <!-- title -->
       <div class="row">
         <div class="row mb-4 mt-xll-5 justify-content-center">
@@ -704,10 +752,10 @@
         </div>
       </div>
       <!-- end of title -->
-      <div class="row row-cols-1 ">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 ">
         <!-- contact info column -->
         <div
-          class="col col-lg-6 col-xl-7 contact-info text-white d-flex justify-content-center align-items-center order-1">
+          class="col contact-info text-white d-flex justify-content-center">
           <div class="centering-div p-lg-4">
             <h3 class="font-Caveat display-6 mb-5">Astrid Pritišanac Atelje</h3>
             <h5 class="font-Caveat fs-4">Astrid</h5>
@@ -734,23 +782,65 @@
         </div>
         <!-- end of contact info column -->
 
+        <!-- contact form column -->
+        <div class="col my-5 my-md-0 my-xxl-5">
+          <h2 class="text-white text-center font-Caveat mb-4" >Javite nam se!</h2>
+          <form method="post" action="process.php">
+            <div class="row">
+              <div class="col-md-6 mb-2">
+                <label for="name" class="text-white">Ime</label>
+                <input type="text" class="form-control buttonShadow" id="name" name="name" placeholder="Erik">
+              </div>
+              <div class="col-md-6 mb-2">
+                <label for="email" class="text-white">e-mail</label>
+                <input type="email" class="form-control buttonShadow" id="email" name="email" placeholder="my.email@gmail.com" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 mb-2">
+                <label for="msgName" class="text-white">Naslov poruke</label>
+                <input type="text" class="form-control buttonShadow" id="msgName" name="subject" placeholder="Moj naslov" required>
+              </div>
+              <div class="col-12 mb-2">
+                <label for="msg" class="form-label text-white">Poruka
+                </label>
+                <textarea class="form-control buttonShadow" id="msg" name="message" rows="3" placeholder="Sadržaj poruke" required></textarea>
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="col">
+                <button type="submit" class="btn btn-primary buttonShadow ">Pošalji</button>
+              </div>
+            </div>
+            
+
+           
+          </form>
+        </div>
+
+        
+        <!-- end of contact form column -->
+
         <!-- map column -->
-        <div class="col col-lg-6 col-xl-5 google-map d-flex align-items-center mt-5 mt-lg-0 order-3 order-lg-2">
-          <div class="ratio ratio-4x3">
+        <div class="col col-md-12 col-xxl-4 google-map mt-3 mt-lg-0 order-3 ">
+          <h2 class="text-white text-center font-Caveat mb-4" >Gdje smo?</h2>
+          <div class="ratio ratio-4x3 buttonShadow">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44671.37817296981!2d18.699915555979114!3d45.591326012755545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475cdd3824af05e7%3A0x6187b929f3d7be8f!2sBilje!5e0!3m2!1sen!2shr!4v1609519372339!5m2!1sen!2shr"
               width="600" height="450" frameborder="0" style="border: 1px solid rgba(0, 0, 0, 0);" class="rounded"
               allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
-        </div>
-        <div class="col text-center py-5 order-2 order-lg-3">
-          <p class="fs-5 text-center text-white">Pratite nas i na našem facebook profilu kako
-            biste vidjeli
-            najnovije
-            radove!</p>
-          <a href="https://www.facebook.com/profile.php?id=100005393805398" class="text-primary"><i
-              class="fab fa-facebook fa-3x"></i></a>
-        </div>
+        </div> 
+      </div>
+
+      <div class="col text-center py-5 order-2 order-lg-3">
+        <p class="fs-5 text-center text-white">Pratite nas i na našem facebook profilu kako
+          biste vidjeli
+          najnovije
+          radove!</p>
+        <a href="https://www.facebook.com/profile.php?id=100005393805398" class="text-primary"><i
+            class="fab fa-facebook fa-3x"></i></a>
       </div>
     </div>
   </section>

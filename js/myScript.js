@@ -1,6 +1,11 @@
 "use strict";
 
-window.addEventListener("load", runAnimations);
+removeLoadingScreen();
+window.addEventListener("load",()=>{
+  checkStorage();
+  runAnimations();
+});
+
 function runAnimations() {
 
 
@@ -72,7 +77,7 @@ function runAnimations() {
 const scrollLinks = document.querySelectorAll(".my-nav-link");
 const navbar = document.querySelector(".navbar");
 const linksContainer = document.getElementById("navbarLinks");
-const colapsedNavHeight = 90;
+const colapsedNavHeight = 90; 
 
 
 //nav shadow on page scroll
@@ -87,7 +92,7 @@ window.addEventListener("scroll", function () {
       navbar.classList.remove("shadow");
     };
   };
-  // setup back to top link
+  // setup back to top button
   const topLink = document.querySelector(".top-link");
   if (scrollHeight > 500) {
     topLink.classList.add("show-link");
@@ -152,15 +157,10 @@ function scrollToElement(event, elementID = 0) {
 function storeIdAndRedirect(id) {
   // store id
   localStorage.setItem("scrollElementID", id);
-  // redirect to index.html - had to put absolute path here to avoid 404 error
-  // window.location.assign("https://alphaactual.github.io/Astrid-Pritisanac-website/");
   window.location.assign("./index.html");
 
 };
 // on page load check if there is some element ID in the storage
-window.onload = function () {
-  checkStorage();
-};
 
 function checkStorage() {
   let elementID = localStorage.getItem("scrollElementID");
@@ -180,7 +180,7 @@ function checkStorage() {
 (function drawingLogic() {
 
   let mouseState = "mouseup";
-  let trailColor;  //color will be defined depending which button was pressed
+  let trailColor;  //color will be defined depending on which button was pressed
 
 
   // add/remove listeners for the mousedown event
@@ -237,7 +237,7 @@ function checkStorage() {
       // 1. create element 
       let e = new Dot(mouse.x, mouse.y);
 
-      // 2. insert it in the DOM if coordinates are not over buttons
+      // 2. insert it in the DOM if coordinates are not over select color buttons
       let brushContainer = document.getElementById("brush-container");
       let contTop = brushContainer.getBoundingClientRect().top;
       let contWidth = brushContainer.getBoundingClientRect().width;
@@ -338,6 +338,46 @@ function checkStorage() {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   });
 })();
+
+//Loading screen
+function removeLoadingScreen() {
+  
+  
+  const loadingContainer = document.getElementById("loading-container");
+  // if it doesnt exist on page (exists only on index.html) stop the function
+  if(loadingContainer == undefined) return;
+  // 1. Check if user has already seen the intro screen or not
+  const stateData = sessionStorage.getItem('state');
+  const loaderImage = document.getElementById("loader-image");
+  
+  // 2. If user has seen it already remove the loadingContainer immediately
+  if (stateData === "seen") {
+    
+    loadingContainer.classList.add("d-none");
+  }else{
+  // If this is user's first time, animate logo (default is longFadeIn, to show logo anyway on slow connections before JS has been loaded and had time to decide),
+  // and after 1.5 sec animate loading screen removal. If the connection is fast (script is loaded within 5 sec) 
+  // longFadeIn will be replaced by animateFadeIn and animation will start without default delay
+    loaderImage.classList.remove("longFadeIn");
+    loaderImage.classList.add("animateFadeIn");
+    setTimeout(() => {
+      loadingContainer.classList.add("hideLoadingScreen");
+    }, 1500);
+    
+  };
+
+    enableScroll()
+    // 3. mark the intro animation as seen by the user
+     sessionStorage.setItem('state', 'seen');
+     
+
+};
+
+function enableScroll() { 
+document.body.classList.remove("stop-scrolling"); 
+}; 
+
+
 
 //footer date
 const date = document.querySelector(".date");

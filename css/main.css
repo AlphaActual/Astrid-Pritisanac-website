@@ -10653,6 +10653,30 @@ a:hover, button:hover {
   fill: #FF4040;
 }
 
+.cls-10 {
+  fill: #f1b600;
+}
+
+.cls-20 {
+  fill: #af232b;
+}
+
+.cls-30 {
+  fill: #035fb6;
+}
+
+.cls-40 {
+  fill: #f25500;
+}
+
+.cls-50 {
+  fill: #b0314f;
+}
+
+.cls-70 {
+  fill: #fff;
+}
+
 @media (prefers-color-scheme: dark) {
   .cls-1 {
     fill: #202020;
@@ -10662,7 +10686,7 @@ a:hover, button:hover {
     fill: #ad2424;
   }
 }
-.cls-1, .cls-2 {
+.cls-1, .cls-2, .cls-10, .cls-20, .cls-30, .cls-40, .cls-50, .cls-60, .cls-70 {
   fill-rule: evenodd;
 }
 

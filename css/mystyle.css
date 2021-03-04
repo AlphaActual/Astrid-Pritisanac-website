@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
  :root{
    --primary: #0A2463;
    --danger: #FF4040;
    --white: white;
    --black:black;
    --warning: #ffc107;
+   --text-darker:#d8d8d8;
  }
 
  html,body {
@@ -22,8 +30,10 @@ body {
 a, button{
   cursor: url("../img/pointer/brush2Fs.png"), auto !important;
 }
-.buttonShadow{
-  box-shadow: 0px 7px 7px -5px rgba(0,0,0,0.8);
+
+.buttonShadow, .shadow{
+  -webkit-box-shadow: 0px 7px 7px -5px rgba(0,0,0,0.8);
+          box-shadow: 0px 7px 7px -5px rgba(0,0,0,0.8);
 }
 .img-shadow{
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82); 
@@ -51,8 +61,8 @@ a, button{
 .height-80 {
   min-height: 80vh;
 }
-.max-height-80{
-  max-height: 80vh !important;
+.max-height-90{
+  max-height: 90vh !important;
 };
 .width-100{
   min-width: 10rem;
@@ -65,6 +75,8 @@ a, button{
 
 
 .navbar{
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
   min-height: 50px;
 }
@@ -99,10 +111,12 @@ a, button{
   height: 100%;
   width: 100%;
   opacity: 0;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
   transition: .5s ease;
   
 }
-.overlay-bg-1{background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
+.overlay-bg-1{background-image: -webkit-gradient(linear, left top, right bottom, from(var(--primary)),color-stop(var(--danger)),to(var(--primary))) ;background-image: -o-linear-gradient(top left, var(--primary),var(--danger),var(--primary)) ;background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
 
 
 .image-cont:hover .overlay, .image-cont-scale:hover .overlay {
@@ -110,10 +124,16 @@ a, button{
 }
 
 .image-cont-scale{
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
   transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 .image-cont-scale:hover{
-  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .text-overlay {
@@ -134,24 +154,31 @@ a, button{
   background-repeat: no-repeat;
 }
 .custom-bg-2{
-  background: linear-gradient( rgba(0,0,0,0) 30%,rgba(0,0,0,0.8)),url(../img/POEMS/bg/notebook.jpg);
+  background: -webkit-gradient( linear,left top, left bottom,color-stop(30%, rgba(0,0,0,0)),color-stop(90%, rgba(0,0,0,1))),url(../img/POEMS/bg/notebook.jpg);
+  background: -o-linear-gradient( rgba(0,0,0,0) 30%,rgba(0,0,0,1) 90%),url(../img/POEMS/bg/notebook.jpg);
+  background: linear-gradient( rgba(0,0,0,0) 30%,rgba(0,0,0,1) 90%),url(../img/POEMS/bg/notebook.jpg);
   background-position: center;
   background-size:cover;
   background-repeat: no-repeat;
   background-attachment:fixed;
   
 }
+.tag-background{
+  background-color: rgba(0,0,0,0.2);
+  min-width: 50%;
+
+}
 .custom-bg-3{
-  background:linear-gradient(right, var(--danger),var(--primary)30% 70%,var(--danger));
+  background:-webkit-linear-gradient(right, var(--danger),var(--primary)30% 70%,var(--danger));
 }
 .text-gradient-1{
-  background: linear-gradient(right, var(--danger),var(--primary));
+  background: -webkit-linear-gradient(right, var(--danger),var(--primary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .text-gradient-2{
-  background: linear-gradient(right, var(--danger), yellow);
+  background: -webkit-linear-gradient(right, var(--danger), yellow);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -184,8 +211,19 @@ a, button{
 }
 
 .animateFadeIn {
-  animation: opac 2s;
-  animation-fill-mode: forwards; /*The element will retain the style values that is set by the last keyframe (opacity:1) */
+  -webkit-animation: opac 2s;
+          animation: opac 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; /*The element will retain the style values that is set by the last keyframe (opacity:1) */
+}
+
+@-webkit-keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes opac {
@@ -201,13 +239,27 @@ a, button{
   position: relative;
 }
 .animateSlideRight {
-  animation: slide-right 2s;
+  -webkit-animation: slide-right 2s;
+          animation: slide-right 2s;
 }
 .animateSlideLeft {
-  animation: slide-left 2s;
+  -webkit-animation: slide-left 2s;
+          animation: slide-left 2s;
 }
 .animateSlideBottom {
-  animation: slide-bottom 1s;
+  -webkit-animation: slide-bottom 1s;
+          animation: slide-bottom 1s;
+}
+
+@-webkit-keyframes slide-right {
+  from {
+    right: -200px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
 }
 
 @keyframes slide-right {
@@ -220,6 +272,16 @@ a, button{
     opacity: 1;
   }
 }
+@-webkit-keyframes slide-left {
+  from {
+    left: -200px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
 @keyframes slide-left {
   from {
     left: -200px;
@@ -227,6 +289,16 @@ a, button{
   }
   to {
     left: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-bottom {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
     opacity: 1;
   }
 }
@@ -290,6 +362,10 @@ a, button{
   visibility: visible;
   z-index: 100;
 }
+
+.border{
+  border: 1px solid green;
+}
  
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
@@ -298,7 +374,7 @@ a, button{
     --primary2: #0953ff;
     --danger: #FF4040;
     --darkGray: #202020;
-    --darkBlue:#202330;
+    --darkgray:#2b2b2b;
     --warning: #ffc107;
     --text-light:#e9ecef;
     --text-darker:#d8d8d8;
@@ -345,18 +421,19 @@ a, button{
     color: var(--primary2) !important;
   }
   #main-navbar{
-    background-color: var(--darkBlue) !important;
+    background-color: var(--darkgray) !important;
   }
   
   img{
-    filter: brightness(85%);
+    -webkit-filter: brightness(85%);
+            filter: brightness(85%);
   }
   #tour-btn{
     background-color: var(--danger-dark);
     border-color: var(--danger-dark);
   }
   
-  .btn-outline-primary{
+  .btn-outline-primary, .btn-primary:hover{
     background-color: var(--primary);
     color: var(--text-darker);
     border-color: var(--primary);
@@ -366,10 +443,11 @@ a, button{
     color: var(--text-darker);
     border-color: var(--danger-dark);
   }
-  .btn-danger:hover, .btn-outline-danger:hover{
+  .btn-danger:hover, .btn-outline-danger:hover, .btn-danger{
     background-color: var(--danger-dark) !important;
     border-color: var(--danger-dark) !important;
   }
+  
   #exhibitions{
     background-color: var(--danger-dark) !important;
   }
@@ -387,8 +465,11 @@ a, button{
     -webkit-text-fill-color: transparent;
   }
   .overlay-bg-1{
+    background-image: -webkit-gradient(linear, left top, right bottom, from(var(--primary)),color-stop(var(--danger-dark)),to(var(--primary)));
+    background-image: -o-linear-gradient(top left, var(--primary),var(--danger-dark),var(--primary));
     background-image: linear-gradient(to bottom right, var(--primary),var(--danger-dark),var(--primary));
   }
+  
 
   
   #about .lead{
@@ -399,7 +480,7 @@ a, button{
     background-color: var(--danger-dark) !important;
   }
   .custom-bg-3{
-    background:-webkit-linear-gradient(right, var(--danger-dark),var(--darkBlue)30% 70%,var(--danger-dark));
+    background:-webkit-linear-gradient(right, var(--danger-dark),var(--darkgray)30% 70%,var(--danger-dark));
   }
   #myImageModal .modal-header{
     background-color: var(--danger-dark) !important;
@@ -418,7 +499,11 @@ a, button{
   #blackWhite{
     color:var(--text-darker) !important;
   }
+  input, textarea{
+    background-color: var(--darkgray) !important;
+    border: none !important;
+    color: var(--text-darker) !important;
+  }
 
 
 }
-

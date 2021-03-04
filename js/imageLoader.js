@@ -1,4 +1,4 @@
-
+"use strict";
 
 (function LOADER() {
 
@@ -6,22 +6,23 @@
     const gallery = document.getElementById("gallery-row");
     // console.dir(gallery);
     const galleryName = gallery.getAttribute("data-gallery");
-    const gallerySize = gallery.getAttribute("data-gallery-size")
+
 
     // temporary object as a database - this will be replaced by a request from the real database
     let galleries = {
 
-        vines: { name: "Ja sam trs", src: "./img/EXHIBITION-I-AM-THE-VINE/paintings/Vines-", carouselSrc: "./img/EXHIBITION-I-AM-THE-VINE/photos/I-am-the-vine-photo-" },
-        lilies: { name: "Ljiljani", src: "./img/EXHIBITION-LILIES/paintings/Lilies-", carouselSrc: "./img/EXHIBITION-LILIES/photos/Lilies-photos-" },
-        waterLilies: { name: "Lopoči", src: "./img/EXHIBITION-WATER-LILIES/Water-lilies-" },
-        landscapes: { name: "Pejzaži", src: "./img/LANDSCAPES/Landscapes-" },
-        adriatic: { name: "Jadran", src: "./img/ADRIATIC/Adriatic-" },
-        stillLife: { name: "Mrtva priroda", src: "./img/STILL-LIFE/Still-life-" },
-        blackAndWhite: { name: "Crno bijelo u boji", src: "./img/BLACK-AND-WHITE/Black-And-White-" },
-        apstractions: { name: "Apstrakcije", src: "./img/APSTRACTIONS/Apstractions-" },
-        poems: { name: "Pjesme", src: "./img/POEMS/Poems-" }
+        vines: { name: "Ja sam trs", gallerySize: 26, src: "./img/EXHIBITION-I-AM-THE-VINE/paintings/Vines-", carouselSrc: "./img/EXHIBITION-I-AM-THE-VINE/photos/I-am-the-vine-photo-", carouselSize: 23 },
+        lilies: { name: "Ljiljani", gallerySize: 34, src: "./img/EXHIBITION-LILIES/paintings/Lilies-", carouselSrc: "./img/EXHIBITION-LILIES/photos/Lilies-photos-", carouselSize: 10 },
+        waterLilies: { name: "Lopoči", gallerySize: 36, src: "./img/EXHIBITION-WATER-LILIES/Water-lilies-" },
+        landscapes: { name: "Pejzaži", gallerySize: 32, src: "./img/LANDSCAPES/Landscapes-", dimensions: ["70 x 50", "50 x 70", "70 x 50", "70 x 50", "50 x 35", "50 x 35", "70 x 50", "29.7 x 21", "21 x 29.7", "40 x 30 x 4", "40 x 30 x 4", "50 x 70", "70 x 50", "21 x 29.7", "21 x 29.7", "21 x 29.7", "21 x 29.7", "21 x 29.7", "35 x 50", "35 x 50", "35 x 50", "70 x 50", "70 x 50", "35 x 50", "70 x 50", "70 x 50", "70 x 50", "70 x 50", "70 x 50", "70 x 50", "70 x 50", "70 x 50"], base: ["lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "platnu", "platnu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu",] },
+        adriatic: { name: "Jadran", gallerySize: 10, src: "./img/ADRIATIC/Adriatic-", dimensions: ["70 x 50", "70 x 50", "50 x 70", "70 x 50", "50 x 70", "29.7 x 21", "120 x 80 x 4", "50 x 70", "70 x 50", "50 x 70"], base: ["lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "platnu", "lesonitu", "lesonitu", "lesonitu"] },
+        stillLife: { name: "Mrtva priroda", gallerySize: 18, src: "./img/STILL-LIFE/Still-life-", dimensions:["50 x 70", "50 x 70", "70 x 50", "70 x 50", "50 x 70", "50 x 70", "50 x 70", "50 x 70", "50 x 70", "70 x 50", "50 x 70", "70 x 50", "70 x 50", "30 x 40 x 4", "50 x 70", "50 x 70", "50 x 70", "50 x 70"], base:["lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "platnu", "lesonitu", "lesonitu", "lesonitu", "lesonitu"] },
+        blackAndWhite: { name: "Crno bijelo u boji", gallerySize: 36, src: "./img/BLACK-AND-WHITE/Black-And-White-", dimensions:["70 x 50", "21 x 29.7", "21 x 29.7", "50 x 70", "21 x 29.7", "21 x 29.7", "29.7 x 21", "29.7 x 21", "29.7 x 21", "29.7 x 21", "29.7 x 21", "21 x 29.7", "28 x 36 x 4", "28 x 36 x 4", "28 x 36 x 4", "50 x 70", "21 x 29.7", "30 x 30 x 4", "40 x 30 x 4", "30 x 40 x 4", "70 x 50", "29.7 x 21", "21 x 29.7", "50 x 70", "21 x 29.7", "21 x 29.7", "21 x 29.7", "21 x 29.7", "50 x 70", "21 x 29.7", "21 x 29.7", "21 x 29.7", "21 x 29.7", "21 x 29.7", "21 x 29.7", "70 x 50"], base:["lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "platnu", "platnu", "platnu", "lesonitu", "lesonitu", "platnu", "platnu", "platnu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu", "lesonitu"]},
+        apstractions: { name: "Apstrakcije", gallerySize: 2, src: "./img/APSTRACTIONS/Apstractions-", titles: ["", "Život"], dimensions: ["70 x 50", "140 x 50 x 4"], base: ["lesonitu", "platnu"] },
+        poems: { name: "Pjesme", gallerySize: 20, src: "./img/POEMS/Poems-", titles: ["Ponekad", "Pjesma o pjesmi", "Ne želim", "Baka", "Kišobran", "Put", "Tingl-tangl-zvec", "Beskraj vremena", "Stara Cesta", "Pjesma oprosta","Ja", "Nekad sam pisao", "Patnja", "Svemirska paučina", "Pjesma svjedočanstva", "Naš čuvar", "Čamac na jedra", "Your dreams", "Pjesma samom sebi", ",Zarez,zarez,"] }
 
     };
+    const gallerySize = galleries[galleryName].gallerySize;
 
     function imageLOAD() {
         const numOfImgsToLoad = gallerySize;
@@ -30,12 +31,16 @@
         for (let i = numOfImgsToLoad; i >= 1; i--) {
             let src = `${galleries[galleryName].src}${i}.jpg`
             // load first 6 images normally, and the rest lazy load
-            let image = `<img ${i > (numOfImgsToLoad - 6) ? `src="${src}"` : 'src=""'} data-src="${src}" data-id="${i}" id="${i}" class="img-fluid image-cont-scale  gallery-image ${i > (numOfImgsToLoad - 6) ? `` : 'fadeIn'}" alt="${galleries[galleryName].name} ${i}">`;
+            let image = `<img ${i > (numOfImgsToLoad - 6) ? `src="${src}"` : 'src=""'} data-src="${src}" data-id="${i}" id="${i}" class="img-fluid image-cont-scale  gallery-image ${i > (numOfImgsToLoad - 6) ? `` : 'fadeIn'}" alt="${galleries[galleryName].titles?.[i - 1] || galleries[galleryName].name + " " + i}">`;
 
-            imageHTML += `<div class="col-12 grid-item my-3 text-center">
+            imageHTML += `<div class="col grid-item my-3 text-center">
                         ${image}
-                        <h4 class="m-2 text-center ${galleryName === "poems" ? "text-white my-4" : ""} font-Caveat">${galleries[galleryName].name} ${i}</h4>
-                    </div>`;
+                        <h4 class="m-2 text-center ${galleryName === "poems" ? "text-white my-4" : ""} font-Caveat">${galleries[galleryName].titles?.[i - 1] || galleries[galleryName].name + " " + i} </h4>
+                        <div class="tag-background d-inline-block">
+                            <h5 class="m-2 fs-5 text-center text-white font-Caveat  ${galleryName !== "poems" ? "d-none" : ""}">Stihovi - Branko Pritišanac</h5>
+                            <h5 class="m-2 fs-5 text-center text-white font-Caveat  ${galleryName !== "poems" ? "d-none" : ""}">Dizajn - Tin Pritišanac</h5>
+                        </div>
+                    </div> `;
 
         };
         // insert it in DOM
@@ -78,7 +83,7 @@
 
 
     if (carouselContainer != null) { // if it exists in DOM
-        const carouselLength = carouselContainer.getAttribute("data-gallery-size")
+        const carouselLength = galleries[galleryName].carouselSize;
         carouselImgLoad(carouselLength, galleryName);
     };
 
@@ -88,7 +93,7 @@
 
             let imageHTML = `<div class="carousel-item  ${i === 1 ? "active" : ""}">
             <img src="${galleries[galleryName].carouselSrc}${i}.jpg" class=" rounded-3 img-fluid"
-              alt="Fotografija sa izložbe ${galleries[galleryName].name}">
+                alt="Fotografija sa izložbe ${galleries[galleryName].name}">
           </div>`;
             carouselContainer.insertAdjacentHTML("beforeend", imageHTML);
         };
@@ -107,7 +112,7 @@
                 let imgElement = event.target;
                 // remove/add some classes
                 imgElement.classList.remove("image-cont-scale")
-                imgElement.classList.add("max-height-80");
+                imgElement.classList.add("max-height-90");
 
 
 
@@ -115,12 +120,12 @@
 
 
                 // create modal html template
-                const modalHTML = `<div class="modal fade" id="myImageModal" tabindex="-1" aria-labelledby="myImageModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                  <div class="modal-content" style="position:relative;">
+                const modalHTML = `<div class="modal fade" id="myImageModal" tabindex = "-1" aria-labelledby="myImageModalLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content" style="position:relative;">
                     <div class="modal-header shadow">
-                      <h5 class="modal-title font-Caveat fs-4" style="position:absolute;left:50%;transform:translate(-50%);" id="myImageModalLabel">${event.target.alt}</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title font-Caveat fs-4" style="position:absolute;left:50%;transform:translate(-50%);" id="myImageModalLabel">${event.target.alt}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body d-flex align-items-md-center text-center">
                         <div class="container-fluid p-0 m-0">
@@ -129,26 +134,29 @@
                                     <div class="wrapper d-flex">
                                         <a class="btn btn-prev text-danger d-none d-lg-block align-self-center"><i class="fas fa-chevron-left top-icon fa-2x" style="pointer-events: none"></i></a>
                                         <div class="col img-div">
-                                        ${imgElement.outerHTML}
+                                            ${imgElement.outerHTML}
                                         </div>
                                         <a class="btn btn-next text-danger d-none d-lg-block align-self-center"><i class="fas fa-chevron-right top-icon fa-2x" style="pointer-events: none"></i></a>
                                     </div>
                                 </div>
-                                <div class=" d-none col-12 col-lg-4 col-xxl-4 mt-5 mt-md-0 d-flex justify-content-center">
+                                <div class="col-12 col-lg-4 col-xxl-4 mt-5 mt-md-0 d-flex justify-content-center ${galleryName == "poems" || galleryName == "vines" || galleryName == "lilies" || galleryName == "waterLilies" ? "d-none" : ""}">
                                     <div class="centering-div text-start font-Caveat fs-4">
-                                        <p><span class="text-danger">Tehnika :</span> Ulje na platnu/lesonitu</p>
-                                        <p><span class="text-danger">Dimenzije :</span> AA x BB x CC</p>
-                                    </div>
+                                    <p><span class="text-danger">Tehnika :</span> Ulje na <span id="technique">${galleries[galleryName].base?.[imgElement.id - 1] || "platnu/lesonitu"}</span></p>
+                                    <p><span class="text-danger">Dimenzije :</span> <span id="dimension">${galleries[galleryName].dimensions?.[imgElement.id - 1] || "AA x BB x CC"}</span> cm</p>
                                 </div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
-                  </div>
+                </div>
+            </div>
                 </div>
               </div>`;
 
+
+
                 // insert modal in DOM
                 document.body.insertAdjacentHTML("beforeend", modalHTML);
+                console.log(document.getElementById('myImageModal'));
 
                 //designate and initiate modal
                 var myModal = new bootstrap.Modal(document.getElementById('myImageModal'), {})
@@ -213,12 +221,12 @@
 
                 function scrollToCurrentImg(id) {
                     const navHeight = navbar.getBoundingClientRect().height;
-                    console.log("navheight= " + navHeight);
+
                     let element = document.getElementById(id);
 
 
                     let elementTop = element.getBoundingClientRect().top + window.scrollY;
-                    console.log(elementTop);
+
                     let position = elementTop - navHeight;
                     window.scrollTo({
                         left: 0,
@@ -264,13 +272,19 @@
                     // to restart fade in transition(needs some delay)
                     setTimeout(() => {
                         currentImg.classList.add("animateFadeIn");
-                    }, 20);
+                    }, 0);
                     //load the image in the body so it can be scrolled to the correct position...
                     let imageInGallery = document.getElementById(newImage.id);
                     imageInGallery.src = imageInGallery.dataset.src;
 
                     // after modal is closed page will be scrolled to the position of the last image viewed in modal
                     scrollToCurrentImg(currentImg.dataset.id);
+
+                    // change image info
+
+                    modal.querySelector("#technique").textContent = galleries[galleryName].base?.[imgNumber - 1] || "platnu/lesonitu";
+                    modal.querySelector("#dimension").textContent = galleries[galleryName].dimensions?.[imgNumber - 1] || "AA x BB x CC";
+
 
                 };
             };
