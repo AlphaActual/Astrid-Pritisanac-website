@@ -1,0 +1,481 @@
+ :root{
+   --primary: #0A2463;
+   --danger: #FF4040;
+   --white: white;
+   --black:black;
+   --warning: #ffc107;
+   --text-darker:#d8d8d8;
+ }
+
+ html,body {
+    
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+} 
+
+body {
+  cursor: url("../img/pointer/brush1Fs.png"), auto !important;
+  position: relative;
+  
+}
+.stop-scrolling { 
+  height: 100%; 
+  overflow: hidden; 
+} 
+a, button{
+  cursor: url("../img/pointer/brush2Fs.png"), auto !important;
+}
+
+.buttonShadow, .shadow{
+  box-shadow: 0px 7px 7px -5px rgba(0,0,0,0.8);
+}
+.img-shadow{
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82); 
+  box-shadow: 0px 10px 13px -7px #000000, 1px 2px 4px 0px rgba(0,0,0,0.82);
+}
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom fonts */
+.font-Caveat{
+  font-family: 'Caveat', cursive;
+}
+
+/* end of Custom fonts */
+
+/* custom heights and widths */
+.height-100 {
+  min-height: 100vh;
+}
+.height-100-nav {
+  min-height: calc(100vh - 90px);
+}
+.height-80 {
+  min-height: 80vh;
+}
+.max-height-90{
+  max-height: 90vh !important;
+};
+.width-100{
+  min-width: 10rem;
+}
+.z-10{
+  z-index: 10;
+}
+
+#loading-container{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 2s ease;
+  background-color: white;
+  z-index: 10000;
+  overflow: hidden;
+}
+#loading-container .wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+}
+
+.hideLoadingScreen{
+  height: 0% !important;
+  
+}
+#loader-image{
+  opacity: 0;
+  z-index: 10010;
+}
+
+
+
+
+.navbar{
+  transition: background-color 0.5s;
+  min-height: 50px;
+}
+
+
+.lang-divider{
+  background-color: black;
+  width: 3px;
+  height: 2rem;
+}
+
+
+.nav-item{
+  margin: 0;
+}
+.heading-painting {
+  margin-top: 100px;
+}
+
+ #tour-btn:hover{
+  background-color: var(--danger);
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  
+}
+.overlay-bg-1{background-image: linear-gradient(to bottom right, var(--primary),var(--danger),var(--primary)) ;}
+
+
+.image-cont:hover .overlay, .image-cont-scale:hover .overlay {
+  opacity: 0.9;
+}
+
+.image-cont-scale{
+  transition: transform .5s;
+}
+.image-cont-scale:hover{
+  transform: scale(1.02);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.custom-bg-1{
+  background-image: url(../img/Gallery/paint-trail-final.png);
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+.custom-bg-2{
+  background: linear-gradient( rgba(0,0,0,0) 30%,rgba(0,0,0,1) 90%),url(../img/POEMS/bg/notebook.jpg);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  
+}
+.tag-background{
+  background-color: rgba(0,0,0,0.2);
+  min-width: 50%;
+
+}
+.custom-bg-3{
+  background:-webkit-linear-gradient(right, var(--danger),var(--primary)30% 70%,var(--danger));
+}
+.text-gradient-1{
+  background: -webkit-linear-gradient(right, var(--danger),var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-2{
+  background: -webkit-linear-gradient(right, var(--danger), yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.BlackAndWhite-title{
+  width: 50%;
+  background: -webkit-linear-gradient(right, var(--danger),yellow);
+  -webkit-background-clip:text ;
+  background-clip: text;
+  -webkit-text-fill-color:transparent ;
+}
+#vinesExhibitionPhotos{
+  background-image: url(../img/Gallery/stand-shadow.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+.btn-prev:hover,.btn-next:hover {
+  color: var(--danger) !important;
+};
+
+
+
+/* ///// EFFECTS ///// */
+/* opacity fade in effect animation */
+.fadeIn {
+  /* setting default element opacity */
+  opacity: 0;
+}
+
+.animateFadeIn {
+  animation: opac 2s;
+  animation-fill-mode: forwards; /*The element will retain the style values that is set by the last keyframe (opacity:1) */
+}
+.longFadeIn{
+  animation: opac 2s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* slide in effect animation */
+.slideMeRight, .slideMeLeft, .slideMeBottom {
+  position: relative;
+}
+.animateSlideRight {
+  animation: slide-right 2s;
+}
+.animateSlideLeft {
+  animation: slide-left 2s;
+}
+.animateSlideBottom {
+  animation: slide-bottom 1s;
+}
+
+@keyframes slide-right {
+  from {
+    right: -200px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  from {
+    left: -200px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slide-bottom {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+/* for mouse trail animation */
+.MouseTrail {
+  position: absolute;
+  height: 7px; width: 7px;
+  border-radius: 4px;
+  background: rgb(230, 7, 7);
+}
+
+ /* color selector */
+#favcolor{
+ width: 100%;
+ height: 33px;
+ border: none;
+}
+
+
+
+/* to make the navbar open full screen on colapsed view */
+@media (max-width: 992px) {
+  #navbar-content {
+    min-height: 100vh;
+  }
+}
+
+#brush-container{
+  position: fixed;
+  top:50%;
+  transform: translate(0%,-50%); 
+  -webkit-transform: translate(0%,-50%);
+  -ms-transform: translate(0%,-50%);
+}
+
+/* scroll to top button */
+.top-link {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(255,255,255,0.3) ;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: -100;
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+.border{
+  border: 1px solid green;
+}
+ 
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  :root{
+    --primary: #0A2463;
+    --primary2: #0953ff;
+    --danger: #FF4040;
+    --darkGray: #202020;
+    --darkgray:#2b2b2b;
+    --warning: #ffc107;
+    --text-light:#e9ecef;
+    --text-darker:#d8d8d8;
+    --danger-dark:#ad2424;
+  }
+  
+  body, .bg-white{
+    background-color: var(--darkGray) !important ;
+  }
+  body, .text-white{
+    color: var(--text-darker) !important;
+  }
+  .bg-danger{
+    background-color: var(--danger-dark) !important ;
+  }
+  nav .text-danger{
+    color: var(--warning) !important;
+  }
+  #card-canvas{
+    background-color: var(--danger-dark) !important;
+    border: none;
+  }
+  #card-hardboard{
+    background-color: var(--primary) !important;
+    border: none;
+  }
+  .navbar-light .navbar-brand{
+    color: var(--text-darker);
+  }
+  .navbar-light .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,193,7, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  .active{
+    color: var(--warning) !important;
+  }
+  
+  .text-dark,.navbar-light .navbar-nav .nav-link{
+    color: var(--text-darker);
+  }
+  .text-muted{
+    color: var(--text-darker) !important;
+  }
+  h1 .text-primary{
+    color: var(--primary2) !important;
+  }
+  #main-navbar{
+    background-color: var(--darkgray) !important;
+  }
+  
+  img{
+    filter: brightness(85%);
+  }
+  #tour-btn{
+    background-color: var(--danger-dark);
+    border-color: var(--danger-dark);
+  }
+  
+  .btn-outline-primary, .btn-primary:hover{
+    background-color: var(--primary);
+    color: var(--text-darker);
+    border-color: var(--primary);
+  }
+  .btn-outline-danger{
+    background-color: var(--danger-dark);
+    color: var(--text-darker);
+    border-color: var(--danger-dark);
+  }
+  .btn-danger:hover, .btn-outline-danger:hover, .btn-danger{
+    background-color: var(--danger-dark) !important;
+    border-color: var(--danger-dark) !important;
+  }
+  
+  #exhibitions{
+    background-color: var(--danger-dark) !important;
+  }
+
+  .custom-bg-1{
+  background-image:url(../img/Gallery/paint-trail-dark-final.png);
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  }
+  .text-gradient-1{
+    background: -webkit-linear-gradient(right, var(--warning),var(--danger));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .overlay-bg-1{
+    background-image: linear-gradient(to bottom right, var(--primary),var(--danger-dark),var(--primary));
+  }
+  
+
+  
+  #about .lead{
+    color: var(--warning);
+  }
+
+  #contact{
+    background-color: var(--danger-dark) !important;
+  }
+  .custom-bg-3{
+    background:-webkit-linear-gradient(right, var(--danger-dark),var(--darkgray)30% 70%,var(--danger-dark));
+  }
+  #myImageModal .modal-header{
+    background-color: var(--danger-dark) !important;
+    border-bottom: none;
+
+  }
+  #myImageModal .modal-body, .modal-body .text-danger{
+    background-color: var(--darkGray) !important;
+    color: var(--danger-dark) !important;
+  }
+
+  .vines-quote .text-primary{
+    color: var(--text-darker) !important;
+  }
+  
+  #blackWhite{
+    color:var(--text-darker) !important;
+  }
+  input, textarea{
+    background-color: var(--darkgray) !important;
+    border: none !important;
+    color: var(--text-darker) !important;
+  }
+
+
+}
+
