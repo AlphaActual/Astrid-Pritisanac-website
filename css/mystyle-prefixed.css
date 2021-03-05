@@ -197,12 +197,6 @@ a, button{
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.text-gradient-3{
-  background: -webkit-linear-gradient(bottom, var(--danger), yellow);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .BlackAndWhite-title{
   width: 50%;
   background: -webkit-linear-gradient(right, var(--danger),yellow);
@@ -439,12 +433,6 @@ a, button{
   }
   .text-gradient-1{
     background: -webkit-linear-gradient(right, var(--warning),var(--danger));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .text-gradient-3{
-    background: -webkit-linear-gradient(bottom, var(--danger), var(--danger));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

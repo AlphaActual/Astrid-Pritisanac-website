@@ -48,34 +48,7 @@
     };
     imageLOAD();
 
-    // this function will initiate after masonry has finished making its layout
-    function lazyLoad(item) {
-        //setup observer
-        function callbackFunc(entries, observer) {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // take url from data-src and put it in src attribute
-
-                    entry.target.src = entry.target.dataset.src;
-                    // stop observing the element
-                    observer.unobserve(item);
-
-
-                };
-            });
-        };
-
-        let options = {
-            root: null,
-            rootMargin: "1000px",
-            threshold: 0,
-        };
-
-        let observer = new IntersectionObserver(callbackFunc, options);
-        observer.observe(item);
-
-
-    };
+    
 
 
     /// Carousels loader
@@ -221,18 +194,13 @@
 
                 function scrollToCurrentImg(id) {
                     const navHeight = navbar.getBoundingClientRect().height;
-
                     let element = document.getElementById(id);
-
-
                     let elementTop = element.getBoundingClientRect().top + window.scrollY;
-
                     let position = elementTop - navHeight;
                     window.scrollTo({
                         left: 0,
                         top: position,
                     });
-
                 };
 
                 function loadImage(direction) {
@@ -293,38 +261,85 @@
 
 
 
-
+    /**********************************MASONRY************************************/
 
     // initiate masonry layout,obrserve for changes and observe images for lazy loading
+    // on screens with width less than 768px ( md breakpoint) Masonry will not be initiated,
+    // on bigger screens (2 columns and more) it will be initiated
 
 
     // 1. when everything is loaded
     window.addEventListener("load", function () {
         observeAndPush();
+        initMasonry();
+        // listen for resize
+        window.addEventListener("resize", initMasonry);
+    });
 
-        //setup and initiate masonry
+    function initMasonry() {
+        //setup and initiate masonry if layout is more than 1 column (768px - md breakpoint)
+        let viewportWidth = window.innerWidth;
+        if (viewportWidth >= 768) {
+            masonrySetup();
+        };
+    };
+
+    function observeAndPush() {
+        document.querySelectorAll(".gallery-image").forEach(function (item) {
+            // add observer for lazy load
+            lazyLoad(item);
+            // push images in array so they can be accesed when using modal
+            imagesArray.push(item);
+        });
+
+    };
+
+    function lazyLoad(item) {
+        //setup observer
+        function callbackFunc(entries, observer) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // take url from data-src and put it in src attribute
+                    entry.target.src = entry.target.dataset.src;
+                    // stop observing the element
+                    observer.unobserve(item);
+
+
+                };
+            });
+        };
+
+        let options = {
+            root: null,
+            rootMargin: "1000px",
+            threshold: 0,
+        };
+
+        let observer = new IntersectionObserver(callbackFunc, options);
+        observer.observe(item);
+
+    };
+
+
+    
+    function masonrySetup() {
+    
+
+        // Masonry setup
         var elem = document.querySelector('.grid');
         var msnry = new Masonry(elem, {
             // options
-            itemSelector: '.grid-item',
+            itemSelector: '.grid-item'
+            
         });
         msnry.layout()
-
 
         function resetMasonry() {
             msnry.layout()
 
         };
 
-        function observeAndPush() {
-            document.querySelectorAll(".gallery-image").forEach(function (item) {
-                // add observer for lazy load
-                lazyLoad(item);
-                // push images in array so they can be accesed when using modal
-                imagesArray.push(item);
-            });
-
-        };
+        
         let options = {
             root: null,
             rootMargin: "0px",
@@ -365,10 +380,8 @@
 
         // Start observing the target node for configured mutations
         observer.observe(targetNode, config);
-
-        // Later, you can stop observing
-        // observer.disconnect();
-    });
+    }
+    
 })();
 
 
