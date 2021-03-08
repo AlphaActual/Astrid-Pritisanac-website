@@ -47,6 +47,7 @@
         gallery.insertAdjacentHTML("beforeend", imageHTML);
     };
     imageLOAD();
+    
 
     
 
@@ -129,7 +130,7 @@
 
                 // insert modal in DOM
                 document.body.insertAdjacentHTML("beforeend", modalHTML);
-                console.log(document.getElementById('myImageModal'));
+                
 
                 //designate and initiate modal
                 var myModal = new bootstrap.Modal(document.getElementById('myImageModal'), {})
@@ -271,23 +272,18 @@
     // 1. when everything is loaded
     window.addEventListener("load", function () {
         observeAndPush();
-        initMasonry();
         // listen for resize
-        window.addEventListener("resize", initMasonry);
-    });
-
-    function initMasonry() {
-        //setup and initiate masonry if layout is more than 1 column (768px - md breakpoint)
-        let viewportWidth = window.innerWidth;
-        if (viewportWidth >= 768) {
-            masonrySetup();
-        };
-    };
+        // window.addEventListener("resize", resetMasonry);
+    
 
     function observeAndPush() {
-        document.querySelectorAll(".gallery-image").forEach(function (item) {
-            // add observer for lazy load
-            lazyLoad(item);
+        document.querySelectorAll(".gallery-image").forEach(function (item, index) {
+            // we don't want to lazy load first 6 images
+            if (index > 5) {
+                // add observer for lazy load
+                lazyLoad(item);
+            };
+            
             // push images in array so they can be accesed when using modal
             imagesArray.push(item);
         });
@@ -299,89 +295,52 @@
         function callbackFunc(entries, observer) {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    // take url from data-src and put it in src attribute
-                    entry.target.src = entry.target.dataset.src;
+                    // if masonry is setup
+                    if (window.innerWidth >= 768){
+                        // when image is loaded, reset masonry layout
+                        entry.target.onload = function() {
+                            resetMasonry();
+                        };
+                    };
+                    // take url from data-src and put it in src attribute ( this will load the image)
+                        entry.target.src = entry.target.dataset.src;
                     // stop observing the element
                     observer.unobserve(item);
-
-
+                    
+                    
                 };
             });
         };
 
         let options = {
             root: null,
-            rootMargin: "1000px",
+            rootMargin: "300px",
             threshold: 0,
         };
 
         let observer = new IntersectionObserver(callbackFunc, options);
         observer.observe(item);
-
     };
+    
 
 
     
-    function masonrySetup() {
+        // if there is only one column layout (on mobile) don't setup masonry
+        if (window.innerWidth < 768) return;
     
-
         // Masonry setup
         var elem = document.querySelector('.grid');
         var msnry = new Masonry(elem, {
             // options
-            itemSelector: '.grid-item'
-            
+            itemSelector: '.grid-item',
+            // disable initial layout
+            // initLayout: false
         });
-        msnry.layout()
-
         function resetMasonry() {
-            msnry.layout()
-
-        };
-
+            msnry.layout();
+        }
         
-        let options = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0,
-        };
-
-        // this observer is to trigger one last masonry adjustment when this section comes into view (fixes last image overlapping bug)
-        let fillerSectionObserver = new IntersectionObserver(resetMasonry, options);
-        const section = document.getElementById("observed-section");
-        fillerSectionObserver.observe(section);
-
-
-
-
-        // 2. when there is any change in the dom (lazy images being loaded),reset masonry layout
-        // Setting up observer for DOM changes on gallery div
-        // Select the node that will be observed for mutations
-        const targetNode = gallery;
-
-        // Options for the observer (which mutations to observe)
-        const config = { attributeFilter: ["src"], childList: false, subtree: true };
-
-        // Callback function to execute when mutations are observed
-        const callback = function (mutationsList, observer) {
-            // Use traditional 'for loops' for IE 11
-            for (const mutation of mutationsList) {
-                // if (mutation.type === 'childList') {
-                //     console.log('A child node has been added or removed.');
-
-                // };
-
-                resetMasonry();
-            };
-        };
-
-        // Create an observer instance linked to the callback function
-        const observer = new MutationObserver(callback);
-
-        // Start observing the target node for configured mutations
-        observer.observe(targetNode, config);
-    }
-    
+    });
 })();
 
 
